@@ -1,0 +1,64 @@
+@font-face {
+    font-family: "ysabeau-black";
+    src: url('./font/ysabeau/static/ysabeau-black.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "ysabeau-blackitalic";
+    src: url('./font/ysabeau/static/ysabeau-blackitalic.ttf');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: "ysabeau-bold";
+    src: url('./font/ysabeau/static/ysabeau-bold.ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: "ysabeau-bolditalic";
+    src: url('./font/ysabeau/static/ysabeau-bolditalic.ttf');
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: "ysabeau-extrabold";
+    src: url('./font/ysabeau/static/ysabeau-extrabold.ttf');
+    font-weight: bolder;
+    font-style: normal;
+}
+@font-face {
+    font-family: "ysabeau-extrabolditalic";
+    src: url('./font/ysabeau/static/ysabeau-extrabolditalic.ttf');
+    font-weight: bolder;
+    font-style: italic;
+}
+@font-face {
+    font-family: "ysabeau-extralight";
+    src: url('./font/ysabeau/static/ysabeau-extralight.ttf');
+    font-weight: lighter;
+    font-style: normal;
+}
+@font-face {
+    font-family: "ysabeau-extralightitalic";
+    src: url('./font/ysabeau/static/ysabeau-extralightitalic.ttf');
+    font-weight: lighter;
+    font-style: italic;
+}
+@font-face {
+    font-family: "ysabeau-italic";
+    src: url('./font/ysabeau/static/ysabeau-italic.ttf');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: "ysabeau-light";
+    src: url('./font/ysabeau/static/ysabeau-light.ttf');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+h1{
+    font-family: ysabeau;
+}
