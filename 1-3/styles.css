@@ -55,6 +55,7 @@ img{
     margin-top: 0;
 }
 
+
 a:link, a:visited {
     background-color: #ED7842;
     color: white;
@@ -65,8 +66,49 @@ a:link, a:visited {
     font-weight: normal;
     font-style: normal;
     display: inline-block;
+}
+  
+a:hover, a:active {
+    background-color: #A0522D;
+}
+
+.menu{
+    background-color: #A0522D;
+    margin: auto;
+    padding-bottom: 10px;
+}
+
+.menu li{
+    display: inline-block;
+    font-size: 20px;
+    padding: 0px;
+    
+}
+
+.menu img{
+    
+    display: block;
+    margin: auto;
+    width: 70%;
+    height: auto;
+
+}
+
+
+.menu a:link, a:visited {
+    background-color: #ED7842;
+    color: white;
+    padding: 5px;
+    margin: 0px;
+    text-align: center;
+    font-size: 45px;
+    font-family: 'ysabeau';
+    font-weight: normal;
+    font-style: normal;
+    display: inline-block;
+    width: 23%;
   }
   
-  a:hover, a:active {
+  .menu a:hover, a:active {
     background-color: #A0522D;
   }
