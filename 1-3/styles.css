@@ -95,7 +95,7 @@ a:hover, a:active {
 }
 
 
-.menu a:link, a:visited {
+.menu a:link, .menu a:visited {
     background-color: #ED7842;
     color: white;
     padding: 5px;
@@ -109,6 +109,47 @@ a:hover, a:active {
     width: 23%;
   }
   
-  .menu a:hover, a:active {
+  .menu a:hover, .menu a:active {
+    background-color: #A0522D;
+  }
+
+.tea{
+    background-color: #A0522D;
+    margin: auto;
+    padding-bottom: 10px;
+}
+
+.tea li{
+    display: inline-block;
+    font-size: 20px;
+    padding: 0px;
+    
+}
+
+.tea img{
+    
+    display: block;
+    margin: auto;
+    width: 70%;
+    height: auto;
+
+}
+
+
+.tea a:link, .tea a:visited {
+    background-color: #ED7842;
+    color: white;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+    font-size: 45px;
+    font-family: 'ysabeau';
+    font-weight: normal;
+    font-style: normal;
+    display: inline-block;
+    width: fit-content;
+  }
+  
+  .tea a:hover, .tea a:active {
     background-color: #A0522D;
   }
