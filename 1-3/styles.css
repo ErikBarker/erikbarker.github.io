@@ -34,7 +34,7 @@ h3{
     margin: 0;
 }
 
-p{
+p, table{
     color: #EDA98A;
     background-color: #6E381F;
     text-align: left;
