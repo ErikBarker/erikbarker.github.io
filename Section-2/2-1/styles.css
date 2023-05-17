@@ -1,0 +1,49 @@
+body{
+ margin: 0px;
+}
+
+p, pre{
+
+}
+
+a{
+
+}
+
+.topmenu{
+    background-color: black;
+}
+
+div.topmenu{
+    background-color: black;
+    
+}
+
+div.topmenu div{
+    display: inline-block;
+    height: 30px;
+}
+
+div.topmenu a{
+    margin: 0;
+    padding: 10px;
+    font-size: larger;
+}
+
+div.topmenu a:link, div.topmenu a:visited{
+    color: white;
+    text-decoration: none;
+}
+
+div.topmenu a:hover{
+    color: white;
+    background-color: rgb(34, 34, 34);
+    text-decoration: none;
+}
+
+div.topmenu a:active{
+    color: black;
+    background-color: gray;
+    text-decoration: none;
+}
+
