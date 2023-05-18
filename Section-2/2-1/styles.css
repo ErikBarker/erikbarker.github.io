@@ -13,10 +13,12 @@ a{
 
 .topmenu{
     background-color: black;
+    position: fixed;
 }
 
 div.topmenu{
     background-color: black;
+    width: 100%;
 }
 
 div.topmenu div{
@@ -98,4 +100,16 @@ div.home_quoat{
 div.home_quoat h3, div.home_quoat h4{
     text-align: center;
     font-size: larger;
+}
+
+div.home_quoat div.triangles::before {
+    width: auto;
+    height: 200px;
+    background: linear-gradient(to bottom right, #fff 0%, #fff 50%, green 50%, green 100%);
+}
+
+div.home_quoat div.triangles::after{
+    width: auto;
+    height: 200px;
+    background: linear-gradient(to top left, #fff 0%, #fff 50%, green 50%, green 100%);
 }
