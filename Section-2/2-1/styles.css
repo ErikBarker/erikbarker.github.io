@@ -1,6 +1,8 @@
 body{
     margin: 0px;
+    padding: 0px;
     background-color: white;
+    margin-bottom: 0px;
 }
 
 p, pre{
@@ -94,22 +96,83 @@ div.home_aboutMe {
 div.home_quoat{
     display: flex;
     flex-direction: column;
-    margin: 10px;
+    margin: 0px;
 }
 
-div.home_quoat h3, div.home_quoat h4{
+div.home_quoat div.triangles div{
+    margin: 0;
+    padding: 30px;
+    background-color: #1181A6;
+}
+
+div.home_quoat h4{
     text-align: center;
+    font-size: 80px;
+    padding: 60px;
+    margin: 0;
+    background-color: #044459;
+    color: #A6002C;
+}
+
+div.home_quoat div.triangles:before {
+    content: "";
+    display: block;
+    width: auto;
+    height: 200px;
+    background: linear-gradient(to bottom right, #fff 0%, #fff 50%, #1181A6 50%, #1181A6 100%);
+}
+
+div.home_quoat div.triangles:after{
+    content: "";
+    display: block;
+    width: auto;
+    height: 200px;
+    background: linear-gradient(to top left, #fff 0%, #fff 50%, #1181A6 50%, #1181A6 100%);
+}
+
+.footer{
+    background-color: black;
+    margin: 0;
+    position: relative;
+    height: 70px;
+}
+
+footer.footer{
+    background-color: black;
+    width: 100%;
+}
+
+footer.footer div{
+    display: inline-block;
+    height: 30px;
+    margin: 5px;
+}
+
+footer.footer h2{
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+}
+
+footer.footer a{
+    margin: 0;
+    padding: 10px;
     font-size: larger;
 }
 
-div.home_quoat div.triangles::before {
-    width: auto;
-    height: 200px;
-    background: linear-gradient(to bottom right, #fff 0%, #fff 50%, green 50%, green 100%);
+footer.footer a:link, footer.footer a:visited{
+    color: #A6002C;
+    text-decoration: none;
 }
 
-div.home_quoat div.triangles::after{
-    width: auto;
-    height: 200px;
-    background: linear-gradient(to top left, #fff 0%, #fff 50%, green 50%, green 100%);
+footer.footer a:hover{
+    color: white;
+    background-color: rgb(34, 34, 34);
+    text-decoration: none;
+}
+
+footer.footer a:active{
+    color: black;
+    background-color: gray;
+    text-decoration: none;
 }
