@@ -106,6 +106,11 @@ div.home_quoat div.triangles div{
     background-color: #1181A6;
 }
 
+div.home_quoat h3{
+    text-align: center;
+    font-size: 100;
+}
+
 div.home_quoat h4{
     text-align: center;
     font-size: 80px;
