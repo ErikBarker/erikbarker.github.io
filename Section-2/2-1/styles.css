@@ -1,8 +1,9 @@
 body{
     margin: 0px;
     padding: 0px;
-    background-color: white;
+    background-color:  rgb(34, 34, 34);
     margin-bottom: 0px;
+    color: white;
 }
 
 p, pre{
@@ -119,7 +120,7 @@ div.home_quoat div.triangles:before {
     display: block;
     width: auto;
     height: 200px;
-    background: linear-gradient(to bottom right, #fff 0%, #fff 50%, #1181A6 50%, #1181A6 100%);
+    background: linear-gradient(to bottom right, rgb(34, 34, 34) 0%, rgb(34, 34, 34) 50%, #1181A6 50%, #1181A6 100%);
 }
 
 div.home_quoat div.triangles:after{
@@ -127,7 +128,7 @@ div.home_quoat div.triangles:after{
     display: block;
     width: auto;
     height: 200px;
-    background: linear-gradient(to top left, #fff 0%, #fff 50%, #1181A6 50%, #1181A6 100%);
+    background: linear-gradient(to top left, rgb(34, 34, 34) 0%, rgb(34, 34, 34) 50%, #1181A6 50%, #1181A6 100%);
 }
 
 .footer{
@@ -171,7 +172,14 @@ footer.footer a:hover{
 }
 
 footer.footer a:active{
-    color: black;
+    color: white;
     background-color: gray;
     text-decoration: none;
 }
+
+/* Color Theme Swatches in Hex */
+.My-Color-Theme-1-hex { color: #59091E; }
+.My-Color-Theme-2-hex { color: #A69C11; }
+.My-Color-Theme-3-hex { color: #A6002C; }
+.My-Color-Theme-4-hex { color: #1180A6; }
+.My-Color-Theme-5-hex { color: #044459; }
