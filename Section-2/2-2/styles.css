@@ -10,8 +10,21 @@ p, pre{
 
 }
 
-a{
+a:link, a:visited{
+    color: #A6002C;
+    text-decoration: none;
+}
 
+a:hover{
+    color: white;
+    background-color: rgb(34, 34, 34);
+    text-decoration: none;
+}
+
+a:active{
+    color: black;
+    background-color: gray;
+    text-decoration: none;
 }
 
 .topmenu{
@@ -205,4 +218,125 @@ div.cert_files{
 div.cert_files embed{
     width: auto;
     height: 450px;
+}
+
+div.contactcontence{
+    height: 500px;
+    background-color: #044459;
+}
+
+div.contactinfo{
+    float: left;
+    background-color: #1181A6;
+    margin: 10px;
+    padding: 45px;
+    font-size: xx-large;
+}
+
+div.contactinfo a:hover{
+    color: white;
+    background-color: #044459;
+    text-decoration: none;
+}
+
+div.contactinfo a:active{
+    color: black;
+    background-color: gray;
+    text-decoration: none;
+}
+
+div.contactform{
+    float: right;
+    padding: 5%;
+    width: 40%;
+    background-color: #1180A6;
+    margin: 10px;
+}
+
+div.contactform form{
+    display: flex;
+    flex-direction: column;
+    background-color: #A69C11;
+    padding: 5px;
+}
+
+div.contactform h3{
+    text-align: center;
+}
+
+div.contactform input, div.contactform textarea{
+    margin: 5px;
+}
+
+div.contactform textarea{
+    height: 50px;
+}
+
+div.contactform input{
+    width: 30%;
+}
+
+/* port */
+
+div.portfolio h2{
+    text-align: center;
+}
+
+div.portfolio div.portfolio_projects{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #044459;
+}
+
+div.portfolio div.portfolio_projects_java{
+    background-color: #1180A6;
+    min-width: 45%;
+    margin: 10px;
+    padding: 5px;
+}
+
+div.portfolio div.portfolio_projects_html{
+    background-color: #1180A6;
+    min-width: 45%;
+    margin: 10px;
+    padding: 5px;
+}
+
+/* resume */
+
+div.resume_res{
+    height: 550px;
+    background-color: #044459;
+}
+
+div.resume h1{
+    text-align: center;
+}
+
+div.resume_res_left {
+    float: left;
+    height: 510px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #1180A6;
+}
+
+div.resume_res_right {
+    float: right;
+    height: 510px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #1180A6;
+}
+
+div.resume div.download_Button{
+    display: flex;
+    justify-content: center;
+}
+
+div.resume div.download_Button a{
+    background-color: black;
+    margin: 5px;
+    padding: 10px;
 }
