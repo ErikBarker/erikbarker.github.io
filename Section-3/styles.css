@@ -1,0 +1,79 @@
+/* Colors */
+:root{
+--custom_dark_grey1: #0B0E2D;
+--custom_dark_grey2: #3D3D3D;
+--custom_light_grey: #9597A6;
+--custom_white: #FEFEFE;
+--custom_blue: #031CFF;
+--custom_gradient_radial_black_to_trans: radial-gradient(57.89% 57.89% at 50% 50%, #0B0D2B 0%, rgba(11, 14, 45, 0) 100%);
+--custom_gradient_radial_white_to_trans: radial-gradient(57.89% 57.89% at 50% 50%, #FFFFFF 0%, rgba(11, 14, 45, 0) 100%);
+--custom_gradient_liner_orange_to_black: linear-gradient(0deg, #CE9671 20.79%, rgba(206, 150, 113, 0) 100%);
+}
+
+/* Navigation Bar */
+
+div.indicator{
+    
+}
+
+div.navbar{
+
+}
+
+div.navbar div.logo{
+    
+}
+
+div.navbar div.logo h1{
+    
+}
+
+div.navbar div.logo img{
+    
+}
+
+div.navbar div.navbuttons{
+
+}
+
+/* Buttons */
+
+a.text_button:link, a.text_button:visited{
+
+}
+
+a.text_button:hover, a.text_button:active{
+
+}
+
+a.round_button_solid:link, a.round_button_solid:visited{
+    width: 251px;
+    height: 54px;
+
+    background: #031CFF;
+    border-radius: 100px;
+}
+
+a.round_button_solid:hover, a.round_button_solid:active{
+    width: 251px;
+    height: 54px;
+
+    background: #031CFF;/*update color*/
+    border-radius: 100px;
+}
+
+a.round_button_hollow:link, a.round_button_hollow:visited{
+    width: 251px;
+    height: 54px;
+
+    border: 3px solid #FFFFFF;
+    border-radius: 100px;
+}
+
+a.round_button_hollow:hover, a.round_button_hollow:active{
+    width: 251px;
+    height: 54px;
+
+    border: 3px solid #FFFFFF;/*update color*/
+    border-radius: 100px;
+}
