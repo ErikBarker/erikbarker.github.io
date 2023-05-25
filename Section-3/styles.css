@@ -69,9 +69,22 @@ div.sign_in_button_frame{
     padding: 2px;
 }
 
-div.sign_in_button_frame div.round_button_hollow{
+div.sign_in_button_frame a div.round_button_hollow{
     padding: 8px;
     border: 1px solid var(--custom_blue);
+}
+
+div.sign_in_button_frame a div.round_button_hollow h5{
+    padding: 0px;
+    margin: 0;
+    text-align: center;
+
+    font-family: 'Campton';
+    font-size: 14px;
+    line-height: 16px;
+    font-style: normal;
+    font-weight: bolder;
+    text-decoration: none;   
 }
 
 /* Buttons */
@@ -118,30 +131,12 @@ div.round_button_hollow{
     border-radius: 200px;
 }
 
-div.round_button_hollow a:link, div.round_button_hollow a:visited{
-    width: 251px;
-    height: 54px;
-    color: var(--custom_blue);
-    text-decoration: none;
-
-    font-family: 'Campton';
-    font-size: 14px;
-    line-height: 16px;
-    font-style: normal;
-    font-weight: bolder;
+a:link div.round_button_hollow, a:visited div.round_button_hollow{
+    color: var(--custom_blue);  
 }
 
-div.round_button_hollow a:hover, div.round_button_hollow a:active{
-    width: 251px;
-    height: 54px;
+a:hover div.round_button_hollow, a:active div.round_button_hollow{
     color: var(--custom_blue);
-    text-decoration: none;
-
-    font-family: 'Campton';
-    font-size: 14px;
-    line-height: 16px;
-    font-style: normal;
-    font-weight: bolder;
 }
 
 
