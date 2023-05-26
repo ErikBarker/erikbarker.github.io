@@ -100,7 +100,7 @@ div.text_button a:link, div.text_button a:visited{
     line-height: 14px;
 }
 
-div.text_button a:hover, div.text_button a:active{
+a:hover div.text_button , a:active div.text_button {
     color: var(--custom_dark_grey2);
     text-transform: uppercase;
     font-weight: bold;
@@ -110,18 +110,12 @@ div.text_button a:hover, div.text_button a:active{
     line-height: 14px;
 }
 
-div.round_button_solid a:link, div.round_button_solid a:visited{
-    width: 251px;
-    height: 54px;
-
-    background: #031CFF;
+a:link div.round_button_solid , a:visited div.round_button_solid {
+    background-color: #031CFF;
     border-radius: 100px;
 }
 
 div.round_button_solid a:hover, div.round_button_solid a:active{
-    width: 251px;
-    height: 54px;
-
     background: #031CFF;/*update color*/
     border-radius: 100px;
 }
@@ -131,12 +125,75 @@ div.round_button_hollow{
     border-radius: 200px;
 }
 
+a{
+    text-decoration: none;
+}
+
 a:link div.round_button_hollow, a:visited div.round_button_hollow{
-    color: var(--custom_blue);  
+    color: var(--custom_blue);
 }
 
 a:hover div.round_button_hollow, a:active div.round_button_hollow{
     color: var(--custom_blue);
+}
+
+/* Go Places*/ 
+div.go_places{
+    position: relative;
+}
+
+div.go_places_img img{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+div.go_places_container{
+    position: relative;
+    width: 30%;
+    z-index: 9;
+}
+
+div.go_places_container div.text_container{
+    
+}
+
+
+
+
+div.go_places_container div.button_container{
+    height: 74px;
+    display: inline-flex;
+}
+
+div.reserve_now_button a div.round_button_solid{
+    width: 251px;
+    height: 54px;
+    margin: 10px;
+
+}
+
+div.watch_video_button a div.round_button_hollow{
+    width: 251px;
+    height: 54px;
+    margin: 10px;
+    display: inline-flex;
+
+    border-color: #FFFFFF;
+}
+
+div.reserve_now_button a h5, div.watch_video_button a h5{
+    padding-top: 16px;
+    text-align: center;
+    font-family: 'campton';
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 18px;
+    line-height: 21px;
+
+    color: #FFFFFF;
 }
 
 
