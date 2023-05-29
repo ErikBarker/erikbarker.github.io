@@ -2,7 +2,8 @@
 :root{
     --custom_dark_grey1: #0B0E2D;
     --custom_dark_grey2: #3D3D3D;
-    --custom_light_grey: #9597A6;
+    --custom_light_grey1: #9597A6;
+    --custom_light_grey2: #CFCFCF;
     --custom_white: #FEFEFE;
     --custom_blue: #031CFF;
     --custom_gradient_radial_black_to_trans: radial-gradient(57.89% 57.89% at 50% 50%, #0B0D2B 0%, rgba(11, 14, 45, 0) 100%);
@@ -146,28 +147,59 @@ div.go_places{
 
 div.go_places_img{
     width: 100%;
-      position: relative;
+    position: relative;
 }
 
 div.go_places_img img{
     width: 100%;
     height: auto;
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     z-index: 0;
 }
 
+div.go_places div.blue_box{
+    position: absolute;
+    width: 420px;
+    height: 120%;
+    left: calc(100% - 420px);
+    top: 0;
+
+    background: #031CFF;
+    mix-blend-mode: multiply;
+}
+
 div.go_places_container{
     position: absolute;
-    top: 40%;
+    top: 350px;
     left: 22.1%;
     width: 30%;
     z-index: 9;
 }
 
-div.go_places_container div.text_container{
-    
+div.go_places_container div.text_container h3, div.go_places_container div.text_container h4{
+    color: #FFFFFF;
+    font-family: 'campton';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    margin: 0;
+}
+
+div.go_places_container div.text_container h3{
+    color: #FFFFFF;
+    font-family: 'campton';
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 80px;
+}
+
+div.go_places_container div.text_container div.line{
+    border: 1px solid #FFFFFF;
+    width: 343px;
+    height: 0px;
+    margin-left: 102px;
 }
 
 
@@ -224,6 +256,159 @@ div.watch_video_button a h5{
     padding-left: 20px;
 }
 
+/* Lets Connect */
+
+div.lets_connect{
+    position: absolute;
+    height: 370px;
+    left: 55px;
+    top: 808px; 
+}
+
+div.lets_connect div.text{
+    font-family: 'campton';
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 14px;
+    line-height: 16px;
+    height: 185px;
+    width: 17px;
+    /* identical to box height */
+
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+
+    color:  var(--custom_blue);;
+}
+
+div.lets_connect div.text h5{
+    transform-origin: top left;
+    transform: rotate(-90deg);
+    height: 17px;
+    width: 185px;
+    margin: 0;
+}
+
+div.lets_connect div.icons div{
+    margin-top: 35px;
+}
+
+/* featured */
+div.featured{
+    margin-top: 100px;
+}
+
+/* Featured left*/
+
+div.featured_left img{
+    width: 516px;
+    height: 689px;
+    margin-left: 80px;
+   
+   
+}
+
+/* featured right */
+div.featured_right{
+    display: flex;
+    flex-direction: column;
+}
+
+div.featured_right div.location{
+    display: inline-flex;
+    height: 160px;
+}
+
+div.featured_right h3{
+    font-family: 'campton';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 22px;
+    line-height: 26px;
+
+    letter-spacing: 1em;
+    text-transform: uppercase;
+    color: var(--custom_blue);
+}
+
+div.featured_right div.location div.image{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 200px;
+    margin: 0;
+}
+
+div.featured_right div.location div.image img{
+    margin-right: 30px;
+    
+}
+
+div.featured_right div.location div.text_container{
+    position: relative;
+    top: 0;
+    right: 0;
+    
+    height: 150px;
+}
+
+div.location div.text_container div.heading{
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+}
+
+div.location div.text_container div.heading img{
+    width: 25px;
+    height: 15px;
+    margin-left: 45px;
+}
+
+
+div.location div.text_container div.heading h4{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 34px;
+    line-height: 40px;
+    height: 40px;
+    margin: 0;
+}
+
+div.location div.text_container div.description p{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    max-width: 352px;
+
+    color: var(--custom_light_grey1);
+}
+
+div.location div.text_container div.interaction_bar{
+    display: inline-flex;
+}
+
+div.location div.text_container div.interaction_bar *{
+    display: inline-flex;
+    color: var(--custom_light_grey2);
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+div.location div.text_container div.interaction_bar div.like a{
+    margin-right: 20px;
+}
+
+div.location div.text_container div.interaction_bar div.like p, div.location div.text_container div.interaction_bar div.comment p{
+    margin: 0;
+    margin-left: 8px;
+}
+
 /* Footer */
 
 div.footer{
@@ -233,14 +418,26 @@ div.footer{
 }
 
 div.footer div.copyright h6{
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 16px;
     text-align: center;
 
-    color: var(--custom_light_grey);
+    color: var(--custom_light_grey1);
 }
+
+/* Icons */
+
+.heart {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-image: radial-gradient(red 69%, #0000 70%) 84.5%/50%;
+    clip-path: polygon(-41% 0, 50% 91%, 141% 0);
+}
+
 
 /* Fonts */
 @font-face {
