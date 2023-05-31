@@ -419,25 +419,15 @@ div.location div.text_container div.interaction_bar div.like p, div.location div
 /* More to Explore */
 
 div.more_to_explore{
-    
+    height: 782px;
 }
 
 div.more_to_explore div.background{
     display: block;
     background-color: var(--custom_dark_grey1);
-    height: 782px;
+    height: 726px;
     content: '';
-}
-
-div.more_to_explore div.background::before{
-    display: block;
-    content: '';
-    height: 75px;
-    background-color: linear-gradient(var(--custom_dark_grey1) 50%, var(--custom_white) 50%);
-}
-
-div.more_to_explore div.background::after{
-
+    clip-path: polygon(0 0, 100% 73px, 100% 653px, 0% 100%);
 }
 
 /* Footer */
