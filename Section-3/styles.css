@@ -420,15 +420,66 @@ div.location div.text_container div.interaction_bar div.like p, div.location div
 
 div.more_to_explore{
     height: 782px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
 }
 
 div.more_to_explore div.background{
-    display: block;
+    position: relative;
     background-color: var(--custom_dark_grey1);
     height: 726px;
     content: '';
     clip-path: polygon(0 0, 100% 73px, 100% 653px, 0% 100%);
+    grid-column: 1;
+    grid-row: 1;
+    z-index: -1;
 }
+
+div.more_to_explore div.content{
+    grid-column: 1;
+    grid-row: 1;
+    display: inline-flex;
+}
+
+div.content div.content_left{
+    width: 680px;
+    margin-left: 246px;
+}
+
+div.content div.content_left{
+    width: 680px;
+    margin-left: 246px;
+    color: var(--custom_white);
+}
+
+div.content div.content_right{
+    width: 514px;
+}
+
+div.content div.content_left div.text{
+    display: inline-flex;
+    align-items: center;
+}
+
+div.content div.content_left div.text h3{
+    width: 270px;
+    height: 75px;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 38px;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+}
+
+div.content div.content_left div.text p{
+    width: 382px;
+    height: 79px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+}
+
 
 /* Footer */
 
