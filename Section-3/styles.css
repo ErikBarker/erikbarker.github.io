@@ -436,6 +436,19 @@ div.more_to_explore div.background{
     z-index: -1;
 }
 
+div.background div.gradent{
+    position: relative;
+    width: 514px;
+    height: 203px;
+    top: 490px;
+    left: 926px;
+
+    background: linear-gradient(180deg, #CE9671 20.79%, rgba(206, 150, 113, 0) 100%);
+    background-blend-mode: screen;
+    opacity: 0.6;
+    transform: rotate(-180deg);
+}
+
 div.more_to_explore div.content{
     grid-column: 1;
     grid-row: 1;
@@ -460,26 +473,242 @@ div.content div.content_right{
 div.content div.content_left div.text{
     display: inline-flex;
     align-items: center;
+    margin-top: 166px;
 }
 
 div.content div.content_left div.text h3{
-    width: 270px;
+    width: 250px;
     height: 75px;
+    font-family: 'Roboto';
+    font-style: normal;
     font-weight: 900;
     font-size: 32px;
     line-height: 38px;
     letter-spacing: 0.5em;
-    text-transform: uppercase;
 }
 
 div.content div.content_left div.text p{
-    width: 382px;
+    width: 371px;
     height: 79px;
+    font-family: 'Roboto';
+    font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 26px;
+    margin-left: 60px;
 }
 
+div.content div.content_left div.image_left{
+    background-image: url(./images/location/cabin_on_snowy_mountians.png);
+    width: 680;
+    height: 418px;
+    margin-top: 115px;
+}
+
+div.image_left a{
+    position: relative;
+    top: 30px;
+    left: 30px;
+}
+
+div.image_left div.image_counter_container{
+    position: relative;
+    top: 320px;
+    left: 602px;
+    width: 66px;
+    height: 66px;
+    margin: 0;
+    box-sizing: border-box;
+    border: 0.5px solid var(--custom_white);
+    border-radius: 100%;
+}
+
+div.image_counter_container div.top_number{
+    position: relative;
+    top: 17px;
+    left: 21px;
+    width: 5px;
+    height: 12px;
+    margin: 0;
+}
+
+div.image_counter_container div.top_number p{
+    margin: 0;
+}
+
+div.image_counter_container div.divisor_line{
+    position: relative;
+    top: 25px;
+    left: 25px;
+    width: 22.63px;
+    height: 0px;
+    transform-origin: bottom left;
+    border: 1px solid #FFFFFF;
+    transform: rotate(-45deg);
+    margin: 0;
+}
+
+div.image_counter_container div.bottom_number{
+    position: relative;
+    top: 20px;
+    left: 29px;
+    width: 15px;
+    height: 12px;
+    color: var(--custom_white);
+    opacity: 0.4;
+    margin: 0;
+}
+
+div.image_counter_container div.bottom_number p{
+    margin: 0;
+}
+
+div.content div.content_right{
+    
+}
+
+div.content div.content_right div.image_right{
+    background-image: url(./images/location/red_car_on_bridge.png);
+    width: 514px;
+    height: 350px;
+    margin-top: 168px;
+    mask-image: polygon(0 0, 100% 36.7px, 100% 330.6px, 0% 100%);
+} 
+
+div.image_right div.discover_adventure_button{
+    width: 251px;
+    height: 54px;
+}
+
+div.image_right div.discover_adventure_button a div.round_button_solid{
+    width: 251px;
+    height: 54px;
+    margin-left: calc(251px - 50%);
+    margin-top: -3px;
+}
+
+div.discover_adventure_button h5{
+    position: relative;
+    top: calc(50% - 11px);
+    left: 0px;
+    padding: 0px;
+    margin: 0px;
+    height: 22px;
+    text-align: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 21px;
+
+    color: #FFFFFF;
+}
+
+div.content_right div.image_scroll_buttons{
+    display: inline-flex;
+    align-items: center;
+    margin-left: calc(50% - 194px);
+    margin-top: 206px;
+}
+
+div.arrow_left{
+    margin-right: 53px;
+}
+
+div.arrow_right{
+    margin-left: 53px;
+}
+
+.dot_grey{
+    height: 11px;
+    width: 11px;
+    background-color: var(--custom_light_grey2);
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.3;
+    margin: 12px;
+}
+
+.dot_blue{
+    height: 11px;
+    width: 11px;
+    background-color: var(--custom_blue);
+    border-radius: 50%;
+    display: inline-block;
+    margin: 12px;
+}
+
+/* tesimonials */
+
+div.tesimonials_wwf{
+    margin-top: 27px;
+    height: 1412px;
+    background-image: url(./images/location/snowy_mountain_w_gradent.png);
+}
+
+div.tesimonials_wwf div.tesimonials{
+    margin-top: 211px;
+}
+
+div.tesimonials_wwf div.tesimonials div.title_text{
+    display: grid;
+    grid-template-columns: 3fr;
+    grid-template-rows: 3fr;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+div.title_text div.quotation{
+    background-image: url(./images/icons/quote.png);
+    width: 196.47px;
+    height: 153.84px;
+    grid-row: 1;
+    grid-column: 1;
+}
+
+div.tesimonials_wwf div.title_text div.title{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+
+    letter-spacing: 1em;
+    text-transform: uppercase;
+
+    color: var(--custom_blue);
+
+    z-index: 1;
+    grid-row: 1;
+    grid-column: 1;
+}
+
+/* whatcha_waiting_for */
+
+div.whatcha_waiting_for{
+    margin-top: 240px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+div.whatcha_waiting_for div.wwf_text h5{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 34px;
+    line-height: 40px;
+    text-align: center;
+    color: var(--custom_white);
+}
+
+div.whatcha_waiting_for div.reserve_now_button {
+    margin-top: 69px;
+}
 
 /* Footer */
 
