@@ -685,6 +685,102 @@ div.tesimonials_wwf div.title_text div.title{
     grid-column: 1;
 }
 
+div.tesimonials div.reviews{
+    margin-top: 74px;
+}
+
+div.tesimonials div.reviews div.review_upper{
+    margin: 0;
+    display: inline-flex;
+    height: 236px;
+    width: 100%;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+div.tesimonials div.reviews div.review_lower{
+    margin: 0;
+    display: inline-flex;
+    height: 236px;
+    width: 100%;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: -10px;
+}
+
+div.review{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 236px;
+    width: 273px;
+    background-color: white;
+    box-shadow: 0px 15.5651px 194.563px rgba(0, 0, 0, 0.15);
+}
+
+div.review div.person{
+    width: 158px;
+    height: 85px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.review div.pfp{
+    width: 73px;
+    height: 72px;
+    background-image: url(./images/people/eddie_labanovskiy.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: -36px;
+    clip-path: circle(33px at center);
+}
+
+div.review div.name{
+    width: 158px;
+    height: 23px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18.6781px;
+    line-height: 22px;
+    text-align: center;
+
+    color: var(--custom_dark_grey1);
+}
+
+div.review div.name p{
+    margin: 0;
+}
+
+div.review div.review_rating{
+    display: inline-flex;
+    width: 65px;
+    height: 12px;
+}
+
+div.review div.review_text_box{
+    width: 210px;
+    height: 85px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.review div.review_text_box p{
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 17.8998px;
+    line-height: 21px;
+    text-align: center;
+
+    color: #9597A6;
+}
 /* whatcha_waiting_for */
 
 div.whatcha_waiting_for{
