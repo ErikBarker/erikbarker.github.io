@@ -1,0 +1,126 @@
+:root{
+    --custom_dark_grey1: #0B0E2D;
+    --custom_dark_grey2: #3D3D3D;
+    --custom_light_grey1: #9597A6;
+    --custom_light_grey2: #CFCFCF;
+    --custom_white: #FEFEFE;
+    --custom_blue: #031CFF;
+    --logo_green:#19CF87;
+    --logo_red:#F24F2B;
+    --logo_purple:#A159F9;
+    --logo_blue:#1FBCFA;
+    --gap: 28px;
+    --scale-delay: 250ms;
+}
+
+@import url('https://fonts.cdnfonts.com/css/campton');
+
+body{
+    margin: 0;
+}
+
+/*Nav Bar*/
+
+.nav_bar{
+    display: flex;
+    height: 100px;
+}
+
+.nav_menu{
+    display: flex;
+    margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.nav_menu_element{
+    text-align: center;
+    margin: auto 0px;
+    position: relative;
+    padding-left: calc(var(--gap) / 2);
+    padding-right: calc(var(--gap) / 2);
+}
+
+.nav_menu_element.link::after{
+    content: '';
+    background-color: var(--custom_blue);
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    top: -40px;
+    left: 0%;
+
+}
+
+.nav_menu_element a{
+    text-decoration: none;
+    font-family: 'Campton';
+    font-size: 12px;
+    line-height: 14px;
+}
+
+/* LOGO */
+
+.logo_container{
+    width: 123px;
+    height: 40px;
+    display: flex;
+}
+
+
+.logo_img{
+    width: 34px;
+    height: 34px;
+    position: relative;
+}
+
+.logo{
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    padding: none;
+    margin: none;
+}
+
+.green{
+    background-color: var(--logo_green);
+    border-radius: 100% 0% 0% 100%;
+    transform: rotate(45deg);
+    left: 10px;
+}
+
+.red{
+    background-color: var(--logo_red);
+    border-radius: 100% 100% 0% 100%;
+    transform: rotate(-45deg);
+    top: 10px;
+}
+
+.purple{
+    background-color: var(--logo_purple);
+    border-radius: 0% 0% 100% 100%;
+    transform: rotate(45deg);
+    top: 20px;
+    left: 10px;
+}
+
+.blue{
+    background-color: var(--logo_blue);
+    border-radius: 0% 100% 0% 0%;
+    transform: rotate(45deg);
+    top: 10px;
+    left: 20px;
+}
+
+.logo_text{
+    width: 75px;
+    height: 36px;
+
+}
+
+.logo_text a{
+    text-decoration: none;
+    font-family: 'Campton';
+    font-size: 26px;
+    line-height: 30px;
+}
