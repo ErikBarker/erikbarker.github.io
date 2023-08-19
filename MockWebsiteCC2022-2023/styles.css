@@ -37,8 +37,7 @@ body{
     text-align: center;
     margin: auto 0px;
     position: relative;
-    padding-left: calc(var(--gap) / 2);
-    padding-right: calc(var(--gap) / 2);
+    padding-inline: calc(var(--gap) / 2);
 }
 
 .nav_menu_element.link::after{
