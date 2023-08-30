@@ -19,10 +19,6 @@ body{
     margin: 0;
 }
 
-*{
-    border:1px solid hotpink;
-}
-
 /*Nav Bar*/
 
 .nav_bar{
@@ -126,4 +122,9 @@ body{
     font-family: 'Campton';
     font-size: 26px;
     line-height: 30px;
+}
+
+
+*{
+    border:1px solid hotpink;
 }
