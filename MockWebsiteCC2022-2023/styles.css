@@ -184,7 +184,7 @@ button{
 }
 @font-face {
     font-family: 'campton';
-    src: url(Section-3\fonts\campton\campton-cufonfonts\CamptonBold.otf);
+    src: url(..\Section-3\fonts\campton\campton-cufonfonts\CamptonBold.otf);
 
     font-weight: bold;
     font-style: normal;
@@ -198,7 +198,7 @@ button{
 }
 @font-face {
     font-family: 'campton';
-    src: url(Section-3\fonts\campton\campton-cufonfonts\CamptonBook.otf);
+    src: url(..\Section-3\fonts\campton\campton-cufonfonts\CamptonBook.otf);
 
     font-weight: normal;
     font-style: normal;
