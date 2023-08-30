@@ -21,8 +21,10 @@ body{
 
 /*Nav Bar*/
 
-.nav_bar{
+nav{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: 100px;
 }
 
@@ -122,9 +124,4 @@ body{
     font-family: 'Campton';
     font-size: 26px;
     line-height: 30px;
-}
-
-
-*{
-    border:1px solid hotpink;
 }
