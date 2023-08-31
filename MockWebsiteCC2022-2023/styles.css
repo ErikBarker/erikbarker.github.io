@@ -62,7 +62,6 @@ nav{
 }
 
 .nav_menu_element button{
-    border: none;
     background-color: transparent;
     text-decoration: none;
     font-family: 'Campton';
@@ -76,10 +75,8 @@ ul.nav_menu li:nth-child(4) {
 }
 
 button.signin_button{
-    text-align: center;
     font: normal normal 900 14px/normal Roboto;
     padding: 10px;
-    color: inherit;
 }
 
 /* LOGO */
@@ -153,6 +150,9 @@ button.signin_button{
 
 button{
     cursor:pointer;
+    text-align: center;
+    color: inherit;
+    border: none;
 }
 
 .hollow{
