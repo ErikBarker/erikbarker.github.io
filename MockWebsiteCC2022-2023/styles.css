@@ -62,7 +62,6 @@ nav{
 }
 
 .nav_menu_element button{
-    background-color: transparent;
     text-decoration: none;
     font-family: 'Campton';
     font-weight: bold;
@@ -153,6 +152,7 @@ button{
     text-align: center;
     color: inherit;
     border: none;
+    background-color: transparent;
 }
 
 .hollow{
@@ -169,7 +169,7 @@ button{
 .solid{
     border-radius: 100px;
     color: white;
-    border: 1px solid var(--custom_blue);
+    border: 1px solid white;
 }
 
 .solid:hover{
@@ -178,10 +178,16 @@ button{
 }
 
 /*RESERVATIONS*/
+.containerblock1{
+    margin: 40px;
+}
+
 .GoPlaces{
     background: url(../Section-3/images/location/car_in_dessert.png), lightgray 50% / cover no-repeat;
     aspect-ratio: 1;
 }
+
+
 
 /* FONTS */
 /* Camption */
