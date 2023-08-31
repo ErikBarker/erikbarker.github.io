@@ -166,6 +166,23 @@ button{
     background-color: var(--custom_blue);
 }
 
+.solid{
+    border-radius: 100px;
+    color: white;
+    border: 1px solid var(--custom_blue);
+}
+
+.solid:hover{
+    color: var(--custom_blue);
+    background-color: transparent;
+}
+
+/*RESERVATIONS*/
+.GoPlaces{
+    background: url(../Section-3/images/location/car_in_dessert.png), lightgray 50% / cover no-repeat;
+    aspect-ratio: 1;
+}
+
 /* FONTS */
 /* Camption */
 @font-face {
