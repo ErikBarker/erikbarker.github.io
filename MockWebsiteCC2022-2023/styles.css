@@ -184,7 +184,8 @@ button{
 
 .GoPlaces{
     background: url(../Section-3/images/location/car_in_dessert.png), lightgray 50% / cover no-repeat;
-    aspect-ratio: 1;
+    background-repeat: no-repeat;
+    aspect-ratio: .5;
 }
 
 
