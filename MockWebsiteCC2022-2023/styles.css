@@ -186,7 +186,29 @@ button{
     background: url(../Section-3/images/location/car_in_dessert.png), lightgray 50% / cover no-repeat;
     background-repeat: no-repeat;
     aspect-ratio: 1.5;
-    margin: 40px 0 40px 0;
+    margin: 0 40px 0 40px ;
+    position: relative;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.GoPlaces .textcontainer .text{
+    color: var(--custom_white);
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}
+
+.GoPlaces .textcontainer .text:first-child{
+    font-size: 79px;
+}
+
+.textcontainer .line{
+    border: white 2px;
+    height: 1px;
 }
 
 .coverbox {
@@ -195,6 +217,8 @@ button{
     position: absolute;
     right: 0;
     top: 0;
+    background: var(--custom_blue);
+    mix-blend-mode: multiply;
 }
 
 .bottomGradeint {
