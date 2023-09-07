@@ -230,6 +230,11 @@ button{
     background-blend-mode: screen;
 }
 
+.reservenow, .watchvideo{
+    width: 18%;
+    height: 54px;
+}
+
 
 
 /* FONTS */
