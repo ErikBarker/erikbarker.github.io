@@ -176,7 +176,7 @@ button{
 }
 
 .solid:hover{
-    color: var(--custom_blue);
+    color: var(--custom_white);
     background-color: transparent;
 }
 
