@@ -153,23 +153,26 @@ button{
     color: inherit;
     border: none;
     background-color: transparent;
+    display: flex;
+    align-items: center;
 }
 
 .hollow{
     border-radius: 100px;
-    color: var(--custom_blue);
-    border: 1px solid var(--custom_blue);
+    color: var(--custom_white);
+    border: 1px solid var(--custom_white);
 }
 
 .hollow:hover{
-    color: white;
+    color: var(--custom_blue);
     background-color: var(--custom_blue);
 }
 
 .solid{
     border-radius: 100px;
-    color: white;
-    border: 1px solid white;
+    color: var(--custom_white);
+    border: 1px solid var(--custom_blue);
+    background-color: var(--custom_blue);
 }
 
 .solid:hover{
@@ -191,6 +194,10 @@ button{
     display: grid;
     align-items: center;
     justify-content: center;
+}
+
+.GoPlaces .textcontainer{
+    z-index: 1;
 }
 
 .GoPlaces .textcontainer .text{
@@ -231,7 +238,6 @@ button{
 }
 
 .reservenow, .watchvideo{
-    width: 18%;
     height: 54px;
 }
 
