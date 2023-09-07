@@ -159,24 +159,23 @@ button{
 
 .hollow{
     border-radius: 100px;
-    color: var(--custom_white);
-    border: 1px solid var(--custom_white);
+    color: var(--custom_blue);
+    border: 1px solid var(--custom_blue);
 }
 
 .hollow:hover{
-    color: var(--custom_blue);
+    color: white;
     background-color: var(--custom_blue);
 }
 
 .solid{
     border-radius: 100px;
-    color: var(--custom_white);
-    border: 1px solid var(--custom_blue);
-    background-color: var(--custom_blue);
+    color: white;
+    border: 1px solid white;
 }
 
 .solid:hover{
-    color: var(--custom_white);
+    color: var(--custom_blue);
     background-color: transparent;
 }
 
