@@ -1,0 +1,68 @@
+html{
+    --bg-color: #0C0C13;
+    --text-color: white;
+    --project-color: #2B4657;
+    --rounding: 10px;
+
+    color: var(--text-color);
+}
+
+body{
+    background-color: var(--bg-color);
+}
+
+nav{
+    position: sticky;
+    display: flex;
+    padding: 20px 30px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 260px;
+
+    border-radius: 0px 0px 30px 30px;
+    background: rgba(12, 12, 19, 0.40);
+
+    backdrop-filter: blur(5px);
+}
+
+.pfpcontainer{
+    width: 20px;
+}
+
+.buttoncontainer{
+    display: flex;
+    padding: 50px 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+
+
+
+
+
+
+.projects{
+
+}
+
+.projects_container{
+    display: grid;
+    grid-template-columns: 35% 35% 30%;
+    grid-template-rows: repeat(4, 20%);
+
+    gap: 30px 50px;
+}
+
+.grid-span-2-row{
+    grid-row: span 2;
+}
+
+.grid-span-4-row{
+    grid-row: span 4;
+}
+
+.project{
+    background-color: var(--project-color);
+}
