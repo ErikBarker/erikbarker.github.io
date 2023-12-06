@@ -12,13 +12,21 @@
     color: var(--text-color);
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     background-color: var(--bg-color);
     margin: 0px;
+    
 }
 
 nav{
     position: sticky;
+    top: 0;
+    z-index: 1000;
+
     display: flex;
     padding: 20px 30px;
     justify-content: space-between;
@@ -31,24 +39,46 @@ nav{
     backdrop-filter: blur(5px);
 }
 
+.pfpcontainer{
+    background-image: url(../Section-1/images/self_photo-erikbarker.jpg);
+    background-position: 50%;
+    background-size: cover;
+    aspect-ratio: 1;
+    
+    width: 45px;
+    
+    border-radius: 100px;
+}
+
 a{
     color: var(--text-color);
     text-decoration: none;
 }
 
-.pfpcontainer{
-    width: 20px;
-}
-
 .buttoncontainer{
     display: flex;
-    padding: 50px 10px;
+    padding: 5px 10px;
     justify-content: center;
     align-items: center;
     gap: 30px;
 }
 
 
+/* Landing */
+
+.landing{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 800px;
+
+    background: radial-gradient(50% 50% at 50% 50%, rgba(12, 12, 19, 0.55) 53.13%, rgba(12, 12, 19, 0.00) 100%), linear-gradient(180deg, rgba(28, 24, 24, 0.00) 26.04%, rgba(123, 6, 6, 0.50) 42.71%, rgba(156, 0, 0, 0.78) 50.52%, rgba(123, 6, 6, 0.50) 60.42%, rgba(28, 24, 24, 0.00) 79.69%);
+}
+
+.landing .textcontainer .sectiontitle{
+    text-align: center;
+    margin: 0px;
+}
 
 /* Projects */
 
@@ -56,12 +86,14 @@ a{
 
 .projects{
     display: flex;
+    position: relative;
     align-items: center;
     flex-direction: column;
     margin-left: auto;
     margin-right: auto;
 
     overflow: hidden;
+    padding-bottom: 300px;
 }
 
 
@@ -101,14 +133,14 @@ a{
 
 .project>.project_img>a{
     position: absolute;
-    bottom: 20px;
-    left: 20px;
+    bottom: 10px;
+    left: 10px;
 }
 
 .project>.project_img>.skills{
     position: absolute;
-    bottom:20px;
-    right: 20px;
+    bottom: 10px;
+    right: 10px;
 
     background-color: var(--skill-color);
     border-radius: var(--rounding);
@@ -118,10 +150,13 @@ a{
     margin: 5px 20px 5px 20px;
 }
 
+
+
+
 .background_circles{
     position: absolute;
     width: 1165px;
-    height: 1165px;
+    aspect-ratio: 1;
     top: 0;
     left: 0;
     translate: -50%;
@@ -131,13 +166,51 @@ a{
     background: radial-gradient(50% 50% at 50% 50%, var(--purple) 0%, rgba(60, 35, 113, 0.54) 64.58%, rgba(0, 0, 0, 0.00) 100%);
 }
 
+.background_circles2{
+    position: absolute;
+    width: 740px;
+    aspect-ratio: 1;
+    top: 22px;
+    right: 0;
+    translate: 50%;
+    z-index: -1;
+
+    border-radius: 740px;
+    background: radial-gradient(50% 50% at 50% 50%, #F5F570 0%, rgba(0, 0, 0, 0.00) 100%);
+}
+
+.background_circles3{
+    position: absolute;
+    width: 930px;
+    aspect-ratio: 1;
+    bottom: 0;
+    right: 0;
+    translate: -50%;
+    z-index: -1;
+
+    border-radius: 930px;
+    background: radial-gradient(50% 50% at 50% 50%, #971013 0%, rgba(0, 0, 0, 0.00) 100%);
+}
+
+
+
 /* Util */
 
-.title{
+.sectiontitle{
     color: var(--text-color);
     text-align: center;
     font-family: Merge One;
     font-size: 96px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.sectionheader{
+    color: rgba(255, 255, 255, 0.90);
+    text-align: center;
+    font-family: Merge One;
+    font-size: 30px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -153,5 +226,9 @@ a{
 
 
 .masive{
-    height: 100px;
+    height: 500px;
+}
+
+.hide{
+    visibility: hidden;
 }
