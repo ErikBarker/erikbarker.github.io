@@ -1,6 +1,7 @@
 :root{
     --bg-color: #0C0C13;
     --text-color: white;
+    --text-color-hover: #F5F570;
     --project-color: #2B4657;
     --project-img-color:#555555;
     --skill-color: #121C23;
@@ -14,6 +15,7 @@
 
 html{
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body{
@@ -55,6 +57,10 @@ a{
     text-decoration: none;
 }
 
+a:hover{
+    color: var(--text-color-hover)
+}
+
 .buttoncontainer{
     display: flex;
     padding: 5px 10px;
@@ -91,9 +97,10 @@ a{
     flex-direction: column;
     margin-left: auto;
     margin-right: auto;
+}
 
-    overflow: hidden;
-    padding-bottom: 300px;
+.projects .textcontainer .sectiontitle *{
+    margin: 15px 0;
 }
 
 
@@ -101,9 +108,9 @@ a{
     display: grid;
     grid-template-columns: 35% 35% 25%;
     justify-content: center;
-    gap: 20px 30px;
-    width: 50%;
-    aspect-ratio: 1.5;
+    gap: 10px 15px;
+    width: 75%;
+    aspect-ratio: 1.75;
 }
 
 
@@ -135,15 +142,16 @@ a{
     position: absolute;
     bottom: 10px;
     left: 10px;
+    padding: 3px;
+
+    background-color: var(--skill-color);
+    border-radius: var(--rounding);
 }
 
 .project>.project_img>.skills{
     position: absolute;
     bottom: 10px;
-    right: 10px;
-
-    background-color: var(--skill-color);
-    border-radius: var(--rounding);
+    right: 10px;    
 }
 
 .skills>p{
@@ -157,7 +165,7 @@ a{
     position: absolute;
     width: 1165px;
     aspect-ratio: 1;
-    top: 0;
+    top: 1000px;
     left: 0;
     translate: -50%;
     z-index: -1;
@@ -170,7 +178,7 @@ a{
     position: absolute;
     width: 740px;
     aspect-ratio: 1;
-    top: 22px;
+    top: 922px;
     right: 0;
     translate: 50%;
     z-index: -1;
@@ -183,7 +191,7 @@ a{
     position: absolute;
     width: 930px;
     aspect-ratio: 1;
-    bottom: 0;
+    top: 800px;
     right: 0;
     translate: -50%;
     z-index: -1;
