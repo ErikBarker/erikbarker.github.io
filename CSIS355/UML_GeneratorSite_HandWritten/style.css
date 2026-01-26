@@ -1,0 +1,192 @@
+:root{
+    --primary_color:#ff00ff;
+    --secomdary_color:#53ffff;
+
+    --primary_dark: #343434;
+    --secondary_dark: #555555;
+
+    --radius: 10px;
+    --spacing: 5px
+}
+
+/*menu*/
+nav{
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-content: center;
+    padding: 2vh 4vw;
+
+    border-radius: 0 0 var(--radius) var(--radius);
+    background-color: var(--secomdary_color);
+
+    position: sticky;
+    top:0;
+    left: 0;
+}
+
+.menuButton{
+    text-decoration: none;
+    border-radius: var(--radius);
+    background-color: var(--primary_color);
+    padding: 10px;
+}
+
+/*Landing */
+#landing{
+    justify-items: center;
+    align-items: center;
+}
+
+#landing div div{
+    width: 20vw;
+}
+
+#landingbtns a:nth-child(1){
+    grid-row: 1;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+/*download*/
+
+#download{
+    grid-template-rows: 1fr 5fr;
+    justify-items: center;
+    align-items: center;
+}
+
+#download .textContainer{
+    grid-row: 1;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+/*development*/
+
+#development{
+    justify-items: center;
+    align-items: center;
+}
+
+#development div{
+    width: 30vw;
+}
+
+/*footer*/
+footer{
+    height: 20vh;
+    grid-template-columns: 2fr 3fr 1fr 1fr;
+    grid-template-rows: 5fr 0.5fr;
+
+    justify-items: center;
+    align-items: center;
+}
+
+footer *:nth-child(1){
+    grid-row: 2;
+    grid-column: 1;
+}
+
+footer *:nth-child(2){
+    grid-row: 1;
+    grid-column: 2;
+}
+
+footer *:nth-child(3){
+    grid-row: 2;
+    grid-column: 3;
+}
+
+footer *:nth-child(4){
+    grid-row: 2;
+    grid-column: 4;
+}
+
+/*General Styles*/
+
+section, body{
+    margin: 0;
+    padding: 0;
+}
+
+section{
+    height: 100vh;
+}
+
+.textContainer *{
+    text-align: center;
+}
+
+
+/*buttons*/
+
+.buttonContainer{
+    gap: var(--spacing)
+}
+
+.buttonContainer .button{
+    text-decoration: none;
+
+    text-align: center;
+    border-radius: var(--radius);
+    background-color: var(--primary_color);
+    padding: 10px;
+}
+
+.textlink *{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+/* Grid Split */
+
+.gridsplit{
+    display: grid;
+}
+
+.grdcol1{
+    grid-template-columns: 1fr;
+}
+
+.grdcol2{
+    grid-template-columns: 1fr 1fr;
+}
+
+.grdcol3{
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grdrow1{
+    grid-template-rows: 1fr;
+}
+
+.grdrow2{
+    grid-template-rows: 1fr 1fr;
+}
+
+.grdrow3{
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+/* flex split */
+
+.flexsplit{
+    display: flex;
+}
+
+.flexLR{
+    flex-direction: row;
+}
+
+.flexRL{
+    flex-direction: row-reverse;
+}
+
+.flexTB{
+    flex-direction: column;
+}
+
+.flexBT{
+    flex-direction: column-reverse;
+}
