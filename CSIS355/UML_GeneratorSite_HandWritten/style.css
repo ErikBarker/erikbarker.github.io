@@ -1,5 +1,13 @@
 :root{
+    --radius: 10px;
 
+    --primary_color: red;
+    --secondary_color: yellow;
+    --background_color1: grey;
+    --background_color2: darkgrey;
+
+    --primary_text_color: black;
+    --secondary_text_color: white;
 }
 
 html, body{
@@ -13,7 +21,10 @@ nav{
     position: sticky;
     top: 0;
     left: 0;
-    height: 10vh;
+   
+
+    background-color: var(--secondary_color);
+    border-radius: 0 0 var(--radius) var(--radius);
 }
 
 .menucontainer{
@@ -24,7 +35,57 @@ nav{
     align-items: center;
     gap: 5px;
 
+    height: 100%;
+    padding: 1em;
+
 }
+
+.buttoncontainer{
+
+    background-color: var(--secondary_color);
+    border-radius: var(--radius);
+
+    text-decoration: none;
+}
+
+.buttoncontainer div{
+    padding: 5px 10px;
+}
+
+.buttoncontainer div p{
+    padding: 0;
+    margin: 0;
+
+    text-align: center;
+    color: var(--primary_text_color);
+}
+
+.menubutton{
+    background-color: var(--primary_color);
+}
+
+.menubutton p{
+    font-size: larger;
+    text-align: center;
+
+    color: var(--primary_text_color);
+}
+
+.titlecontainer{
+
+    max-width: 150px;
+    max-height: 10vh;
+    overflow: hidden;
+   
+    
+}
+
+.titlecontainer img{
+    max-width: 100%;
+    height: auto;
+}
+
+
 
 /* Main Content */
 
@@ -43,6 +104,8 @@ nav{
 section{
     height: 100vh;
 }
+
+/* home */
 
 #home{
     grid-area: "home";
