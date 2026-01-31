@@ -60,13 +60,40 @@
             </div>
         </section>
         <section id="download">
-            <!-- TODO finish menues -->
+            <!-- TODO finish menus -->
             <div class="titlecontainer">
                 <h2>Download</h2>
             </div>
-            <div id="OSMenucontainer"></div>
-            <div id="vertionMenucontainer"></div>
-            <div id="downloadMenucontainer"></div>
+            <div id="OSMenucontainer" class="menuList">
+                <button type="button">Windows</button>
+                <button type="button">Linux</button>
+                <button type="button">Mac</button>
+            </div>
+            <div id="vertionMenucontainer" class="menuList">
+                <button type="button">V1.2 Stable</button>
+                <button type="button">V1.2</button>
+                <button type="button">V1.0</button>
+            </div>
+            <div id="downloadMenucontainer">
+                <a href="" class="buttoncontainer">
+                    <div>
+                        <p>Download</p>
+                    </div>
+                </a>
+                <div class="paragraphcontainer">
+                    <div class="titlecontainer">
+                        <p>Description</p>
+                    </div>
+                    <div class="textcontainer">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus reprehenderit aliquid explicabo similique, tempore ipsum architecto perferendis temporibus? Maxime, impedit.</p>
+                    </div>
+                </div>
+                <a href="" class="buttoncontainer">
+                    <div>
+                        <p>Docs</p>
+                    </div>
+                </a>
+            </div>
         </section>
         <section id="development">
             <div class="recentDevcontainer">
@@ -98,7 +125,27 @@
             </div>
         </section>
         <section id="reportbugs">
+            <div class="titlecontainer">
+                <h2>Report Bugs</h2>
+            </div>
             <!-- TODO put form -->
+
+            <form action="/bugform.js" method="post">
+                
+                <label for="bugtitle">Title:</label>
+                <input type="text" name="title" id="bugtitle">
+                
+                <label for="tags">Tags:</label>
+                <input type="bugtext" name="tags" id="bugtags">
+
+                <label for="bugdescription">Description:</label>
+                <input type="text" name="description" id="bugdescription">
+                
+                <label for="bugattatchments">Attatchments:</label>
+                <input type="file" name="attatchments" id="bugattachments">
+                <input type="submit" value="Submit">
+                
+            </form>
         </section>
         <footer>
             <div class="textcontainer">
