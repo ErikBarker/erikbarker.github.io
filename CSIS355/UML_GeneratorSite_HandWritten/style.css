@@ -14,6 +14,7 @@
 
     --primary_text_color: black;
     --secondary_text_color: white;
+    --off_text_color: #E9EBE7;
 
     --radius: 10px;
     --seperationSpace: 5px;
@@ -88,6 +89,11 @@ section{
     border-radius: var(--radius);
 }
 
+/* TODO fix button css so:
+    the container is for size
+    the a>div is the button background
+ */
+
 .buttoncontainer{
 
     background-color: var(--secondary_color);
@@ -151,29 +157,32 @@ nav{
 
 }
 
-.menubutton{
-    background-color: var(--menu_button_defult) !important;
-    color: var(--primary_text_color) !important;
+.navmenucontainer .buttoncontainer{
+    background-color: var(--menu_button_defult);
+    transition: 0.3s ease-out;
+}
 
-    transition: 0.3s ease-out !important;
+.menubutton{
+    
+    
 }
 
 .menubutton p{
-    font-size: larger !important;
-    text-align: center !important;
+    font-size: larger;
+    text-align: center;
 
-    color: var(--primary_text_color) !important;
+    color: var(--primary_text_color);
 
-    transition: 0.3s ease-out !important;
+    transition: 0.3s ease-out;
 }
 
 .menubutton:hover{
-    background-color: var(--menu_button_hover) !important;
+    background-color: var(--menu_button_hover);
     
 }
 
 .menubutton:hover p{
-    color: var(--secondary_text_color) !important;
+    color: var(--secondary_text_color);
 }
 
 
@@ -279,13 +288,87 @@ nav{
 #download .menucontainer{
     width: 100%;
     height: 100%;
+
+    justify-items: center;
 }
 
-.menucontainer .list{
-    /* START LIST SECTION */
+.menucontainer .list, .menucontainer .menu{
+    padding: var(--seperationSpace);
+    box-sizing: border-box;
+
+    width: 70%;
+    height: 90%;
+
+    background-color: var(--background_color2);
+    border-radius: var(--radius);
 }
 
+.menucontainer .list .textcontainer{
+    color: var(--secondary_text_color);
+    text-align: center;
+    font-size: large;
+}
 
+.menucontainer .list .listselection{
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
+    align-items: center;
+}
+
+.menucontainer .list .listselection a{
+    text-decoration: none;
+    text-align: center;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menucontainer .list .listselection a span{
+    width: 80%;
+    height: 5px;
+    background-color: var(--button_defult);
+    border-radius: var(--radius);
+    content: "";
+
+    transition: 0.3s ease-in-out;
+}
+
+.menucontainer .list .listselection a p{
+    color: var(--off_text_color);
+    margin: var(--seperationSpace);
+
+    transition: 0.3s ease-in-out;
+}
+
+.menucontainer .list .listselection a:hover span{
+    width: 90%;
+    background-color: var(--button_hover);
+}
+
+.menucontainer .list .listselection a:hover p{
+    color: var(--secondary_text_color);
+    margin: var(--seperationSpace);
+}
+
+.menucontainer .menu{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    color: var(--off_text_color);
+}
+
+.menucontainer .menu .buttoncontainer{
+    width: 60%;
+}
+
+.menucontainer .menu .titleabovecontainer{
+    width: 80%;
+}
 
 
 /* development */
