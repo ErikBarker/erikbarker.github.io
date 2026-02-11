@@ -1,0 +1,35 @@
+div{
+    background-color: red;
+    border: orange dashed 5px;
+
+    padding: 1em;
+}
+
+span{
+    background-color: aliceblue;
+    border-radius: 5px;
+}
+
+.bgblue{
+    background-color: blue;
+}
+
+.bggreen{
+    background-color: green;
+}
+
+.fgred{
+    color: red;
+}
+
+#bigbox{
+    height: 10svh;
+}
+
+#hiddenbox{
+    display: none;
+}
+
+.togglebox{
+    background-color: lime;
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburger Menu Demo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .menu-icon {
+            font-size: 24px;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .menu-icon:hover {
+            color: #e7bfbf;
+        }
+
+        .title {
+            margin-left: 20px;
+            font-size: 20px;
+        }
+
+        .menu {
+            background-color: #efcd02;
+            border: 2px solid #333;
+            border-radius: 5px;
+            position: absolute;
+            top: 70px;
+            left: 20px;
+            width: 200px;
+            display: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            color:black;
+        }
+
+        .menu.active {
+            display: block;
+        }
+
+        .menu ul {
+            list-style: none;
+        }
+
+        .menu ul li {
+            padding: 15px 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .menu ul li:last-child {
+            border-bottom: none;
+        }
+
+        .menu ul li:hover {
+            background-color: #e0e0e0;
+            cursor: pointer;
+        }
+
+        .content {
+            flex: 1;
+            padding: 40px;
+            background-color: #fafafa;
+        }
+
+        .content h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .content p {
+            line-height: 1.6;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <i class="fa-solid fa-bars menu-icon" id="menuIcon"></i>
+            <span class="title">My Website</span>
+
+            <div class="menu" id="menu">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content">
+            <h1>Welcome to the Page</h1>
+            <p>Click the hamburger menu icon in the top left to open the menu. It will transform into a close icon when opened.</p>
+            <p>This is a simple demonstration of a hamburger menu using vanilla JavaScript and Font Awesome icons.</p>
+        </div>
+    </div>
+
+    <script>
+    //    Our JS logic code will go here
+    let menu = document.querySelector("#menu");
+    let menuicon = document.querySelector("#menuIcon")
+
+    menuicon.addEventListener('click', ()=>{
+        menu.classList.toggle("active")
+
+        if (menu.classList.contains("active")) {
+            menuicon.classList.remove("fa-bars")
+            menuicon.classList.add("fa-times")
+        } else{
+            menuicon.classList.add("fa-bars")
+            menuicon.classList.remove("fa-times")
+        }
+    });
+    </script>
+</body>
+</html>
