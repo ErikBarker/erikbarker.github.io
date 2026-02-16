@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Books</title>
+  <style>
+    #UMLGenVertions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .UMLGenVertion {
+      border: 1px solid #ccc;
+      color: #1d1919;
+      padding: 1rem;
+      border-radius: 8px;
+      width: 200px;
+      background:#f9e052;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Game of Thrones Books</h1>
+  <div id="UMLGenVertions"></div>
+
+  <script>
+   
+
+      // Define an asynchronous function named getBooks
+      async function getBooks() {
+
+      // Start a try block to handle possible errors
+      try {
+
+        // Send a request to the given URL and wait for the response
+        const response = await fetch('http://localhost:5555/UMLGenVertions'); // API endpoint URL -- we will change this later to our server
+
+        // Convert the response data from JSON format into a JavaScript object
+        const data = await response.json();
+
+        // Get the HTML element with the id "books"
+        const booksDiv = document.getElementById('UMLGenVertions');
+
+        // Loop through each book object inside the data.books array
+        for (let book of data.UMLGenVertion) {
+
+          // Create a new <div> element for a single book
+          const bookDiv = document.createElement('div');
+
+          // Add the CSS class "book" to the newly created div
+          bookDiv.classList.add('UMLGenVertions');
+
+          // Insert HTML content into the book div using template literals
+          bookDiv.innerHTML = `
+            <h3>${book.title}</h3>              // Display the book title
+            <p><strong>Year:</strong> ${book.year}</p>        // Display the book year
+            <p><strong>Published?:</strong> ${book.published}</p> // Display published status
+          `;
+
+          // Add the book div inside the main books container
+          booksDiv.appendChild(bookDiv);
+        }
+
+      // Catch block runs if an error occurs in the try block
+      } catch (error) {
+
+        // Log the error message to the browser console
+        console.error('Error:', error);
+      }
+}
+
+    getBooks();
+  </script>
+</body>
+</html>
