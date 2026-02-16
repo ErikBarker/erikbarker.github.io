@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>UML Generater</title>
+</head>
+<!-- TODO make figma design to better improve outline -->
+<body>
+    <nav>
+        <div class="navmenucontainer">
+            <div class="buttoncontainer">
+                <a href="/" class="menubutton">
+                    <div>
+                        <p>Home</p>
+                    </div>
+                </a>
+            </div>
+            <div class="buttoncontainer">
+                <a href="download" class="menubutton">
+                    <div>
+                        <p>Download</p>
+                    </div>
+                </a>
+            </div>
+            <div class="titlecontainer">
+                <img src="umllogo.png" alt="UML Generater">
+            </div>
+            <div class="buttoncontainer">
+                <a href="" class="menubutton">
+                    <div>
+                        <p>Development</p>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="buttoncontainer">
+                <a href="" class="menubutton">
+                    <div>
+                        <p>Report Bugs</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <div id="maincontent">
+        <section id="home">
+            <div class="left">
+                <div class="paragraphcontainer bg1">
+                    <div class="textcontainer">
+                        <strong>Understand Your Code Better</strong>
+                    </div>
+                    <div class="textcontainer">
+                        <p>Creating UML and flowcharts for existing code is a time consuming and tedious process. With (insert product name here) we offer a fully costomizable UML generator with a json configurable system to let you use any programing language you want.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="textcontainer">
+                    <h1>Start Createing UMLs today</h1>
+                </div>
+                <div class="landingbuttons">
+                    <div class="buttoncontainer">
+                        <a href="">
+                            <div>
+                                <p>Download</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="buttoncontainer">
+                        <a href="">
+                            <div>
+                                <p>Other Vertions</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="buttoncontainer">
+                        <a href="">
+                            <div>
+                                <p>Whats New</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="download">
+            <!-- REDO with radio button possably -->
+            <div class="textcontainer">
+                <h1>Download</h1>
+            </div>
+            <div class="menucontainer" id="OSMenucontainer">
+                <div class="list">
+                    <div class="textcontainer">
+                        <p>OS</p>
+                    </div>
+                    <div class="listselection">
+                        <a href="">
+                            <p>Windows</p>
+                            <span></span>
+                        </a>
+                        <a href="">
+                            <p>Linux</p>
+                            <span></span>
+                        </a>
+                        <a href="">
+                            <p>Mac</p>
+                            <span></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="menucontainer" id="vertionMenucontainer">
+                <div class="list">
+                    <div class="textcontainer">
+                        <p>Vertion</p>
+                    </div>
+                    <div class="listselection">
+                        <a href="">
+                            <p>Vertion 1.0.0</p>
+                            <span></span>
+                        </a>
+                        <a href="">
+                            <p>Vertion 1.2.0</p>
+                            <span></span>
+                        </a>
+                        <a href="">
+                            <p>Vertion 1.2.0 Stable</p>
+                            <span></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="menucontainer" id="downloadMenucontainer">
+                <div class="menu">
+                    <div class="buttoncontainer">
+                        <a href="">
+                            <div>
+                                <p>Download</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="titleabovecontainer">
+                        <div class="textcontainer">
+                            <p>Description</p>
+                        </div>
+                        <div class="textcontainer">
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae odit quos inventore qui ratione tempora veritatis consequatur laborum ipsam cupiditate recusandae beatae enim quo, delectus cumque aspernatur natus, tempore illo?</p>
+                        </div>
+                    </div>
+                    <div class="buttoncontainer">
+                        <a href="">
+                            <div>
+                                <p>Docs</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="development">
+            
+        </section>
+        <section id="reportbugs">
+            <div class="titlecontainer">
+                <h2>Report Bugs</h2>
+            </div>
+            <!-- TODO put form -->
+
+            <form action="/bugform.js" method="post">
+                
+                <label for="bugtitle">Title:</label>
+                <input type="text" name="title" id="bugtitle">
+                
+                <label for="tags">Tags:</label>
+                <input type="bugtext" name="tags" id="bugtags">
+
+                <label for="bugdescription">Description:</label>
+                <input type="text" name="description" id="bugdescription">
+                
+                <label for="bugattatchments">Attatchments:</label>
+                <input type="file" name="attatchments" id="bugattachments">
+                <input type="submit" value="Submit">
+                
+            </form>
+        </section>
+        <footer>
+            <div class="textcontainer">
+                <p>Copyright 2026</p>
+            </div>
+            <div class="titlecontainer"><img src="umllogo.png" alt="UMLGenerator"></div>
+            <a href="" class="textbutton">
+                <p>Terms Of Service</p>
+            </a>
+            <a href="" class="textbutton">
+                <p>Privicy Policy</p>
+            </a>
+        </footer>
+    </div>
+</body>
+</html>
