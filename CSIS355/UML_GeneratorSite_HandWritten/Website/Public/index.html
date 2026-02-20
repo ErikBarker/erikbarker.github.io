@@ -6,19 +6,19 @@
     <link rel="stylesheet" href="style.css">
     <title>UML Generater</title>
 </head>
-<!-- TODO make figma design to better improve outline -->
+
 <body>
     <nav>
         <div class="navmenucontainer">
-            <div class="buttoncontainer">
-                <a href="" class="menubutton">
+            <div class="buttoncontainer desktop">
+                <a href="#home" class="menubutton">
                     <div>
                         <p>Home</p>
                     </div>
                 </a>
             </div>
-            <div class="buttoncontainer">
-                <a href="" class="menubutton">
+            <div class="buttoncontainer desktop">
+                <a href="#download" class="menubutton">
                     <div>
                         <p>Download</p>
                     </div>
@@ -27,23 +27,65 @@
             <div class="titlecontainer">
                 <img src="umllogo.png" alt="UML Generater">
             </div>
-            <div class="buttoncontainer">
-                <a href="" class="menubutton">
+            <div class="buttoncontainer desktop">
+                <a href="#development" class="menubutton">
                     <div>
                         <p>Development</p>
                     </div>
                 </a>
             </div>
             
-            <div class="buttoncontainer">
-                <a href="" class="menubutton">
+            <div class="buttoncontainer desktop">
+                <a href="#reportbugs" class="menubutton">
                     <div>
                         <p>Report Bugs</p>
                     </div>
                 </a>
             </div>
+
+            <div class="buttoncontainer mobile" id="hamburger">
+                <a class="menubutton">
+                    <div>
+                        <p>Menu</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div id="hamburgerMenu" class="bg1 hidden">
+            <div class="hammenucontainer">
+                <div class="buttoncontainer">
+                    <a href="#home" class="menubutton">
+                        <div>
+                            <p>Home</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="buttoncontainer">
+                    <a href="#download" class="menubutton">
+                        <div>
+                            <p>Download</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="buttoncontainer">
+                    <a href="#development" class="menubutton">
+                        <div>
+                            <p>Development</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="buttoncontainer">
+                    <a href="#reportbugs" class="menubutton">
+                        <div>
+                            <p>Report Bugs</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </div>
     </nav>
+    
     <div id="maincontent">
         <section id="home">
             <div class="left">
@@ -62,21 +104,21 @@
                 </div>
                 <div class="landingbuttons">
                     <div class="buttoncontainer">
-                        <a href="">
+                        <a href="#download">
                             <div>
                                 <p>Download</p>
                             </div>
                         </a>
                     </div>
                     <div class="buttoncontainer">
-                        <a href="">
+                        <a href="#download">
                             <div>
                                 <p>Other Vertions</p>
                             </div>
                         </a>
                     </div>
                     <div class="buttoncontainer">
-                        <a href="">
+                        <a href="#download">
                             <div>
                                 <p>Whats New</p>
                             </div>
@@ -160,7 +202,24 @@
             </div>
         </section>
         <section id="development">
-            
+            <div class="left bg1">
+                <h1 class="textcontainer">Recent Development</h1>
+                <div id="DevelopmentData">
+                    <div class="paragraphcontainer">
+                        <p class="textcontainer"><strong>Continuation</strong></p>
+                        <p class="textcontainer">Current development efforts are focussed on finishing and improving the initial vertion to reach a stable point.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right bg1">
+                <h1 class="textcontainer">Known Issues</h1>
+                <div id="IssuesData">
+                    <div class="paragraphcontainer">
+                        <p class="textcontainer"><strong>Lexer</strong></p>
+                        <p class="textcontainer">Lexer fails processing for space baised languages Major memory leakage.</p>
+                    </div>
+                </div>
+            </div>
         </section>
         <section id="reportbugs">
             <div class="titlecontainer">
@@ -199,4 +258,7 @@
         </footer>
     </div>
 </body>
+<script src="downloadMenu.js"></script>
+<script src="bugform.js"></script>
+<script src="hamberg.js"></script>
 </html>

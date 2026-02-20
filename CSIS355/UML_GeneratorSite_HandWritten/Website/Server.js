@@ -4,3 +4,6 @@ const path = require('path');
 const fs = require('fs');
 
 //HTTP servers
+const server = http.createServer((req, res)=>{
+
+});
