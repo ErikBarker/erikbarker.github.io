@@ -4,7 +4,7 @@ const downloadMenucontainer = document.getElementById("downloadMenucontainer");
 
 async function getProducts() {
     //Get the dat
-    const response = await fetch("http://erikbarker.github.io/CSIS355/UML_GeneratorSite_HandWritten/Website/Public/db.json");
+    const response = await fetch("https://erikbarker.github.io/CSIS355/UML_GeneratorSite_HandWritten/Website/Public/db.json");
 
     const data = await response.json();
 
@@ -14,7 +14,7 @@ async function getProducts() {
 async function processProducts() {
     const data = await getProducts();
 
-    const productList = data.UMLGenVersions;
+    const productList = data.UMLGenVertions;
 
     console.log(data)
     console.log(productList)
