@@ -14,7 +14,7 @@ async function getProducts() {
 async function processProducts() {
     const data = await getProducts();
 
-    const productList = data.UMLGenVertions;
+    const productList = data.UMLGenVersions;
 
     console.log(data)
     console.log(productList)

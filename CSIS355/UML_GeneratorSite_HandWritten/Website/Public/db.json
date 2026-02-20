@@ -45,4 +45,17 @@
   "depricated": false,
   "description": "lorem ipsum",
   "price": 30
-}]}
+},{"vertion": "1.5.0",
+  "stable": false,
+  "os": "mac",
+  "depricated": false,
+  "description": "lorem ipsum",
+  "price": 75
+},{
+  "vertion": "0.0.2",
+  "stable": false,
+  "os": "linux",
+  "depricated": true,
+  "description": "lorem ipsum",
+  "price": 0}
+]}
