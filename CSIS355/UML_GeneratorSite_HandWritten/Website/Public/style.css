@@ -328,7 +328,7 @@ nav{
     grid-column: 1;
 }
 
-#vertionMenucontainer{
+#versionMenucontainer{
     grid-row: 2;
     grid-column: 2;
 }
@@ -450,7 +450,7 @@ nav{
         grid-column: 1;
     }
 
-    #vertionMenucontainer{
+    #versionMenucontainer{
         grid-row: 3;
         grid-column: 1;
     }
