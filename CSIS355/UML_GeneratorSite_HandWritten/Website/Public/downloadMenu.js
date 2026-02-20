@@ -1,5 +1,5 @@
 const osMenucontainer = document.getElementById("OSMenucontainer");
-const versionMenucontainer = document.getElementById("versionMenucontainer");
+const vertionMenucontainer = document.getElementById("vertionMenucontainer");
 const downloadMenucontainer = document.getElementById("downloadMenucontainer");
 
 async function getProducts() {
@@ -14,7 +14,7 @@ async function getProducts() {
 async function processProducts() {
     const data = await getProducts();
 
-    const productList = data.UMLGenversions;
+    const productList = data.UMLGenVertions;
 
     console.log(data)
     console.log(productList)
@@ -35,12 +35,12 @@ async function processProducts() {
 
     console.log(osList)
 
-    //Get version list for default (first occuring)
+    //Get vertion list for default (first occuring)
 
-    const versionList = [];
+    const vertionList = [];
     const productListFiltered = productList.filter((product)=>{
         if(product.os === osList[0]){
-            return product.version;
+            return product.vertion;
         }
     });
 
@@ -48,23 +48,23 @@ async function processProducts() {
 
     for (let i = 0; i < productListFiltered.length; i++) {
         const product = productListFiltered[i];
-        console.log(product.version)
+        console.log(product.vertion)
 
-        if (!versionList.includes(product.version)) {
+        if (!vertionList.includes(product.vertion)) {
             let extra = ""
             if (product.stable) {
                 extra = " stable"
             }
-            versionList.push(product.version + extra);
+            vertionList.push(product.vertion + extra);
         }
     }
 
-    genMenuItems(versionList, versionMenucontainer);
+    genMenuItems(vertionList, vertionMenucontainer);
 
     //Get download list for default (first occuring)
     
     const downloadData = productListFiltered.filter((product)=>{
-        if (product.version === versionList[0].split(' ')[0]) {
+        if (product.vertion === vertionList[0].split(' ')[0]) {
             return product;
         }
     });
@@ -117,7 +117,7 @@ function genDownloadsection(data){
                         </a>
                     </div>
                     <div class="textcontainer">
-                            <h4>${data.version + extra}</h4>
+                            <h4>${data.vertion + extra}</h4>
                         </div>
                     <div class="titleabovecontainer">
                         <div class="textcontainer">
@@ -138,18 +138,18 @@ function genDownloadsection(data){
 
 async function updateMenu(){
     const data = await getProducts();
-    const productList = data.UMLGenversions;
+    const productList = data.UMLGenVertions;
 
     
 
-    //Get version list for current selection value
+    //Get vertion list for current selection value
     const menuList = osMenucontainer.querySelector('.listselection');
 
-    const versionList = [];
+    const vertionList = [];
     const productListFiltered = productList.filter((product)=>{
         console.log(menuList.getAttribute("selection"))
         if(product.os === menuList.getAttribute("selection")){
-            return product.version;
+            return product.vertion;
         }
     });
 
@@ -157,36 +157,36 @@ async function updateMenu(){
 
     for (let i = 0; i < productListFiltered.length; i++) {
         const product = productListFiltered[i];
-        console.log(product.version)
+        console.log(product.vertion)
 
-        if (!versionList.includes(product.version)) {
+        if (!vertionList.includes(product.vertion)) {
             let extra = ""
             if (product.stable) {
                 extra = " stable"
             }
-            versionList.push(product.version + extra);
+            vertionList.push(product.vertion + extra);
         }
     }
 
-    genMenuItems(versionList, versionMenucontainer);
+    genMenuItems(vertionList, vertionMenucontainer);
 
     //Get download list for current slection or default
     console.log("productListFiltered")
     console.log(productListFiltered)
 
-    const versionMenuList = versionMenucontainer.querySelector('.listselection');
+    const vertionMenuList = vertionMenucontainer.querySelector('.listselection');
     let downloadData = null;
-    if (versionList.includes(versionMenuList.getAttribute("selection"))) {
-        console.log("has version")
+    if (vertionList.includes(vertionMenuList.getAttribute("selection"))) {
+        console.log("has vertion")
         downloadData = productListFiltered.filter((product)=>{
-            if (product.version === versionMenuList.getAttribute("selection").split(' ')[0]) {
+            if (product.vertion === vertionMenuList.getAttribute("selection").split(' ')[0]) {
                 return product;
             }
         });
     } else{
-        console.log("does not have version reverting to defualt")
+        console.log("does not have vertion reverting to defualt")
         downloadData = productListFiltered.filter((product)=>{
-            if (product.version === versionList[0].split(' ')[0]) {
+            if (product.vertion === vertionList[0].split(' ')[0]) {
                 return product;
             }
         });

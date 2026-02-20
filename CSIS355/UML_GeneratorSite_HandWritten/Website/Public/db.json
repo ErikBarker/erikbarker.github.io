@@ -1,5 +1,5 @@
-{"UMLGenversions": [{
-  "version": "1.0.0",
+{"UMLGenVertions": [{
+  "vertion": "1.0.0",
   "stable": true,
   "os": "windows",
   "depricated": false,
@@ -8,7 +8,7 @@
 
 },
 {
-  "version": "1.0.0",
+  "vertion": "1.0.0",
   "stable": false,
   "os": "linux",
   "depricated": false,
@@ -16,7 +16,7 @@
   "price": 30
 },
 {
-  "version": "1.0.5",
+  "vertion": "1.0.5",
   "stable": true,
   "os": "windows",
   "depricated": false,
@@ -24,7 +24,7 @@
   "price": 50
 },
 {
-  "version": "0.0.3",
+  "vertion": "0.0.3",
   "stable": false,
   "os": "windows",
   "depricated": true,
@@ -32,14 +32,14 @@
   "price": 0
 },
 {
-  "version": "1.0.0",
+  "vertion": "1.0.0",
   "stable": true,
   "os": "mac",
   "depricated": false,
   "description": "lorem ipsum",
   "price": 80
 },{
-  "version": "1.2.0",
+  "vertion": "1.2.0",
   "stable": true,
   "os": "linux",
   "depricated": false,
