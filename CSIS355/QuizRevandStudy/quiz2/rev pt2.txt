@@ -1,0 +1,162 @@
+Q1
+
+Given this array, use `map()` to create a new array of just the course codes and print it.
+
+const courses = [
+{ code: "CIS 355", name: "Server Side Web Development", credits: 3 },
+{ code: "CIS 356", name: "Advanced Web Development", credits: 3 },
+{ code: "CIS 210", name: "Database Management", credits: 4 }
+];
+
+console.log(courses.map((course)=>{
+    return course.code;
+}));
+
+Q2
+
+Create a constructor function called `Student` that takes `name` and `gpa`. 
+Create one object with `"John"` and `3.8`. Print the name and gpa using dot notation.
+
+function Student(name,gpa){
+    this.name = name;
+    this.gpa = gpa;
+}
+
+var stu = Student("John",3.8);
+
+console.log(stu.name, stu.gpa)
+
+Q3
+
+Create a class called `Product` with a constructor that takes `name` and `price`. 
+Add a method `getInfo()` that returns a string in this format: `"Product: Laptop | Price: $999"`. 
+Create one object with `"Laptop"` and `999`, call `getInfo()` and print it.
+
+class Product{
+    constructor(name,price){
+        this.name = name;
+        this.price = price;
+    }
+
+    getInfo(){
+        return `Product: ${this.name} | Price: $${this.price}`
+    }
+}
+
+var prd = new Product("Laptop",999);
+console.log(prd.getInfo());
+
+Q4
+
+Given this HTML, write JavaScript so that when each button is clicked, the `<div>` 
+background color changes to match the button's text.
+
+<div id="colorBox" style="width:200px; height:200px; border:1px solid black;"></div>
+<button id="redBtn">Red</button>
+<button id="blueBtn">Blue</button>
+
+const div = document.getElementById("colorBox");
+const redbtn = document.getElementById("redBtn");
+const bluebtn = document.getElementById("blueBtn");
+
+redbtn.addEventListener("click",()=>{
+    colorBox.style.background_color = "red";
+});
+
+bluebtn.addEventListener("click",()=>{
+    colorBox.style.background_color = "blue";
+});
+
+
+Q5
+
+Write a JavaScript program using nested for loops that prints the following pattern to the console:
+
+1
+12
+123
+1234
+12345
+
+for(var i = 0; i<5; i++){
+    var row = "";
+    for(var j = 1; j<i+2;j++){
+        row+=j;
+    }
+    console.log(row);
+}
+
+Q6
+
+Given this HTML, write JavaScript that listens for a click on the 
+button and changes the `<h1>` text to `"Welcome to CIS 355!"` when clicked.
+
+<h1 id="title">Hello</h1>
+<button id="myBtn">Click Me</button>
+
+const title = document.getElementById("title");
+const btn = document.getElementByID("mybtn");
+
+btn.addEventListener("click"()=>{
+    title.textContent = "Welcome to CIS 355!";
+});
+
+Q7
+
+Write an arrow function called `getDiscount` that takes a `price` and `percent` 
+as parameters and returns the price after the discount is applied. Call it with `200` 
+and `10` and print the result.
+
+const getDiscount = (price,discount)=>{
+    return price - (price*(discount/100));
+}
+
+console.log(getDiscount(200,10));
+
+Q8
+
+Add a method called `getSummary` to this object that 
+returns `"Alice is enrolled in 4 courses"`. Then call it and print the result.
+
+const student = {
+name: "Alice",
+courses: ["CIS 355", "CIS 356", "CIS 210", "CIS 357"]
+};
+
+
+
+Q9
+
+Using this array, use a `for...of` loop to print only the names of students whose GPA is `3.8` or higher.
+
+const students = [
+{ name: "Alice", gpa: 3.9 },
+{ name: "Bob", gpa: 3.2 },
+{ name: "Carol", gpa: 3.8 },
+{ name: "Dan", gpa: 3.5 }
+];
+
+Q10
+
+Using the same `courses` array, use `filter()` to get only courses with 3 credits and print the result.
+
+const courses = [
+{ code: "CIS 355", name: "Server Side Web Development", credits: 3 },
+{ code: "CIS 356", name: "Advanced Web Development", credits: 3 },
+{ code: "CIS 210", name: "Database Management", credits: 4 }
+]
+
+Q11
+
+Declare `let score = "85"`. Write an `if/else` that checks `score === 85` and 
+prints `"Match"` if true or `"No Match"` if false. Then on the next line, 
+convert `score` using `Number()` and check again with `===`, printing the same way.
+
+Q12
+
+Given this HTML, write JavaScript so that clicking "Show" makes the 
+paragraph visible and clicking "Hide" makes it disappear.
+
+<p id="message" style="display:none;">This is a secret message!</p>
+<button id="showBtn">Show</button>
+<button id="hideBtn">Hide</button>

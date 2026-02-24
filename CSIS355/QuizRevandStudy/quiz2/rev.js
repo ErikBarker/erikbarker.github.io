@@ -24,6 +24,18 @@
 //Answer analises:
 //Redo answer
 
+/*
+    const courses = [
+    { code: "CIS 355", name: "Server Side Web Development", credits: 3 },
+    { code: "CIS 356", name: "Advanced Web Development", credits: 3 },
+    { code: "CIS 210", name: "Database Management", credits: 4 }
+    ];
+
+    console.log(courses.map((course)=>{
+        return course.code;
+    }));
+*/ 
+
 
 //Actual answer
 
@@ -65,6 +77,17 @@
 //Answer analises:
 //Redo answer
 
+/*
+function Student(name, gpa){
+    this.name = name;
+    this.gpa = gpa;
+    this.display = function(){
+        console.log("Name:",name," GPA:",gpa);
+    }
+}
+    var stu = new Student("John", 3.8);
+    stu.display();
+*/
 
 //Actual answer
 
@@ -105,6 +128,21 @@
 //Answer analises:
 //Redo answer
 
+/*
+    class Product{
+        constructor(name, price){
+            this.name = name;
+            this.price = price;
+        }
+
+        getInfo(){
+            return "Product: " + this.name + " | Price: $" + this.price;
+        }
+    }
+
+    var prd = new Product("laptop",999);
+    console.log(prd.getInfo());
+*/
 
 //Actual answer
 
@@ -140,6 +178,20 @@
 //Answer analises:
 //Redo answer
 
+/*
+    const div = document.getElementbyId("colorbox");
+    const redbtn = document.getElementbyId("redbtn");
+    const bluebtn = document.getElementbyId("bluebtn");
+
+    redbtn.addeventlistener("click", ()=>{
+        div.background_color="red";    
+    });
+
+    bluebtn.addeventlistener("click", ()=>{
+        div.background_color="blue";    
+    });
+*/
+
 
 //Actual answer
 
@@ -171,6 +223,17 @@
 //Redo answer
 
 
+/*
+    for(var i=1;i<=5;i++){
+        var row = "";
+        for(var j=1;j<=i;j++){
+            row+=j;
+        }
+
+        console.log(row);
+    }
+*/
+
 //Actual answer
 
 //Q6
@@ -194,6 +257,14 @@
 //Answer analises:
 //Redo answer
 
+/*
+    const title = document.getElementById("title");
+    const btn = document.getElementById("mybtn");
+
+    btn.addEventListener("click",()=>{
+        title.textcontent="Welcome to CIS 355!";
+    });
+*/
 
 //Actual answer
 
@@ -214,6 +285,14 @@
 //Answer analises:
 //Redo answer
 
+    /*
+        const getDiscount = (price,percent)=>{
+            return price-(price*(percent/100));
+        }
+
+        console.log(getDiscount(200,10));
+
+    */
 
 //Actual answer
 
@@ -237,6 +316,20 @@
 
 //Answer analises:
 //Redo answer
+
+/*
+const student = {
+    name: "Alice",
+    courses: ["CIS 355", "CIS 356", "CIS 210", "CIS 357"],
+    getSummary(){
+        return this.name + " is enrolled in " + this.courses.length; 
+    }
+};
+
+console.log(student.getSummary());
+
+*/
+
 
 
 //Actual answer
@@ -268,6 +361,18 @@
 //Answer analises:
 //Redo answer
 
+/*
+    const students = [
+        { name: "Alice", gpa: 3.9 },
+        { name: "Bob", gpa: 3.2 },
+        { name: "Carol", gpa: 3.8 },
+        { name: "Dan", gpa: 3.5 }
+    ];
+
+    for(student of students){
+        console.log(student.name);
+    }
+*/
 
 //Actual answer
 
@@ -301,6 +406,22 @@
 //Answer analises:
 //Redo answer
 
+/*
+const courses = [
+    { code: "CIS 355", name: "Server Side Web Development", credits: 3 },
+    { code: "CIS 356", name: "Advanced Web Development", credits: 3 },
+    { code: "CIS 210", name: "Database Management", credits: 4 }
+];
+
+const filtered = courses.filter((course)=>{
+        if(course.credits==3){
+            return course;
+        }
+    });
+
+    console.log(filtered);
+
+*/
 
 //Actual answer
 
@@ -337,6 +458,21 @@
 //Answer analises:
 //Redo answer
 
+/*
+    let score = "85";
+
+    if(score===85){
+        console.log("Match");
+    }else{
+        console.log("No Match");    
+    }
+
+    if(Number(score)===85){
+        console.log("Match");
+    }else{
+        console.log("No Match");    
+    }
+*/
 
 //Actual answer
 
@@ -348,10 +484,24 @@
 //<button id="showBtn">Show</button>
 //<button id="hideBtn">Hide</button>
 
-//my answer:ndf
+//my answer:dnf
 
 //Answer analises:
 //Redo answer
 
+/*
+    const msg = document.getElementById("message");
+    const showbtn = document.getElementById("showBtn");
+    const hidebtn = document.getElementById("hideBtn");
+
+    showbtn.addEventListener("click",()=>{
+            msg.style.display = "block";
+        });
+
+    showbtn.addEventListener("click",()=>{
+            msg.style.display = "none";
+        });
+*/
 
 //Actual answer
+
