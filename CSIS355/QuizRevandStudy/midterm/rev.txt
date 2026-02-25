@@ -1,0 +1,153 @@
+const os = require("os");
+const path = require("path");
+const http = require("http");
+const fs = require("fs");
+
+filepath = path.join(__dirname, "testfile.txt");
+fs.writeFile(filepath, "content", (err)=>{
+    if(err) throw err;
+    console.log("file made");
+});
+
+fs.appendFile(filepath, "more content", (err)=>{
+    if(err) throw err;
+    console.log("file made");
+});
+
+const server = http.createServer((req, res)=>{
+    if(req.url === "/"){
+        fs.readFile(filepath, 'utf-8', (err, content)=>{
+            if(err) throw err;
+            res.writeHead(200, {'content-type':'text/text'});
+            res.end(content);
+        });
+    }else{
+        res.writeHead(404);
+        res.end();
+    }
+});
+
+
+
+function print(text){
+    console.log(text);
+}
+
+const prnt = (text)=>{
+    console.log(text);
+}
+
+print("test print");
+prnt("test prnt");
+
+function student(name, gpa){
+    this.name = name;
+    this.gpa = gpa;
+    this.displayInfo = ()=>{
+        console.log("Name: " + this.name + " GPA: " + this.gpa);
+    }
+}
+
+var stu = new student("john", 4.0);
+stu.displayInfo();
+
+class car{
+    constructor(make, model){
+        this.make = make;
+        this.model = model;
+    }
+
+    displayInfo(){
+        console.log(`Make: ${this.make} | Model: ${this.model}`);
+    }
+}
+
+var c = new car("ford", "2008");
+c.displayInfo();
+
+const classData = {
+    class:"cs355",
+    creditcount:4,
+    taken:"current",
+    changeCredit:function(crd){ //funcName:(...)=>{...} also works
+        this.creditcount = crd;
+    }
+}
+
+const displayclass = (cd)=>{ 
+    console.log("Class: " + cd.class);
+    console.log("Class: " + cd.creditcount);
+    console.log("Class: " + cd.taken);
+}
+
+
+displayclass(classData);
+classData.changeCredit(3);
+displayclass(classData);
+
+const arrData = ["new array", 5, 9, true, "end"]
+
+console.log(arrData);
+
+for(var i=0;i<arrData.length; i++){
+    console.log(arrData[i]);
+}
+
+for(data of arrData){
+    console.log(data);
+}
+
+const objarr=[
+    {
+        class:"355",
+        dept:"cs"
+    },
+    {
+        class:"116",
+        dept:"cs"
+    },
+    {
+        class:"216",
+        dept:"cs"
+    },
+    {
+        class:"101",
+        dept:"geog"
+    }
+]
+
+console.log(objarr.filter((course)=>{ // course => course.dept === "cs" also works
+    if(course.dept === "cs"){
+        return course;
+    }
+}));
+
+const deptartments = objarr.map(course => course.dept);
+console.log(deptartments);
+
+
+
+
+server.listen(5959, ()=>{console.log("server started")});
+
+//major errors
+// - function constructers
+/*
+    function funcname(params){
+        this.var = param;
+        this.var = param;
+        this.func = (...)=>{...}
+    }
+    NOT
+    const funcName = (...)=>{...}
+
+    use new key word to make function
+*/
+//minor issues
+/*
+    -casing/spelling of vars
+    -os.function memorization
+*/
+//unknown
+// js dom (practice with basic html file) //div.innerhtml*
+//solve in 5 min for each coding problem
