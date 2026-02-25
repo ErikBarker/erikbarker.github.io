@@ -21,7 +21,7 @@
 
 // }
 
-//Answer analises:
+//Answer analises:map takes a arrow function, and do not need to iterate over the array
 //Redo answer
 
 /*
@@ -74,7 +74,7 @@
 
 // student1.display();
 
-//Answer analises:
+//Answer analises: needs to be a constructer function not a class
 //Redo answer
 
 /*
@@ -125,7 +125,7 @@ function Student(name, gpa){
 
 // console.log(prod.getinfo());
 
-//Answer analises:
+//Answer analises: dont need to declare vars outside of the constructor when making a class
 //Redo answer
 
 /*
@@ -175,7 +175,7 @@ function Student(name, gpa){
 
 // });
 
-//Answer analises:
+//Answer analises: event listener needs to be "click" not MouseEvent.click
 //Redo answer
 
 /*
@@ -254,7 +254,7 @@ function Student(name, gpa){
 
 // });
 
-//Answer analises:
+//Answer analises:capitlize the c in textcontent, and follow camel cassing structure
 //Redo answer
 
 /*
@@ -282,7 +282,7 @@ function Student(name, gpa){
 
 // console.log(getDiscount(200,10));
 
-//Answer analises:
+//Answer analises:just need to set the const equal to the arrow function
 //Redo answer
 
     /*
@@ -314,7 +314,7 @@ function Student(name, gpa){
 // }
 // console.log(getSummary(student));
 
-//Answer analises:
+//Answer analises: function needs to be inside the constructer function
 //Redo answer
 
 /*
@@ -358,7 +358,7 @@ console.log(student.getSummary());
 //     }
 // }
 
-//Answer analises:
+//Answer analises: not any distinct issues here
 //Redo answer
 
 /*
@@ -370,7 +370,9 @@ console.log(student.getSummary());
     ];
 
     for(student of students){
-        console.log(student.name);
+        if(student.gpa>=3.8){
+//         console.log(student.name);
+//     }
     }
 */
 
@@ -403,7 +405,7 @@ console.log(student.getSummary());
 // }
 // console.log(filtered);
 
-//Answer analises:
+//Answer analises: uses === instead of ==
 //Redo answer
 
 /*
@@ -414,7 +416,7 @@ const courses = [
 ];
 
 const filtered = courses.filter((course)=>{
-        if(course.credits==3){
+        if(course.credits===3){
             return course;
         }
     });
@@ -455,7 +457,7 @@ const filtered = courses.filter((course)=>{
 
 // }
 
-//Answer analises:
+//Answer analises: Number() is its own function in js not a function in a var
 //Redo answer
 
 /*
@@ -486,7 +488,7 @@ const filtered = courses.filter((course)=>{
 
 //my answer:dnf
 
-//Answer analises:
+//Answer analises: ran out of time to finish question
 //Redo answer
 
 /*
