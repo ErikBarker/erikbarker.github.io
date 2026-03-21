@@ -520,7 +520,7 @@ nav{
 
 #reportbugs{
     grid-area:reportbugs ;
-
+    display: none;/*removed for development*/
     background-color: var(--background_color1);
 }
 

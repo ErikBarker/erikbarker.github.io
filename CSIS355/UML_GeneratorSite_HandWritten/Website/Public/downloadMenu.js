@@ -3,7 +3,7 @@ const vertionMenucontainer = document.getElementById("vertionMenucontainer");
 const downloadMenucontainer = document.getElementById("downloadMenucontainer");
 
 async function getProducts() {
-    //Get the dat
+    //Get the data
     const response = await fetch("https://erikbarker.github.io/CSIS355/UML_GeneratorSite_HandWritten/Website/Public/db.json");
 
     const data = await response.json();
