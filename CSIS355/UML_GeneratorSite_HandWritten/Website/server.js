@@ -5,7 +5,7 @@ const fs = require('fs');
 
 //HTTP servers
 const server = http.createServer((req, res)=>{
-    var public = path.join(__dirname,"public");
+    var public = path.join(__dirname,"Public");
     
     if (req.url === '/') {
         var filePath = path.join(public, "index.html");
