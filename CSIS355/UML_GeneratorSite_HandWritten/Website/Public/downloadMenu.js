@@ -118,6 +118,7 @@ function genDownloadsection(data){
                     </div>
                     <div class="textcontainer">
                             <h4>${data.vertion + extra}</h4>
+                            <h5>$${data.price}</h5>
                         </div>
                     <div class="titleabovecontainer">
                         <div class="textcontainer">

@@ -1,61 +1,133 @@
-{"UMLGenVertions": [{
-  "vertion": "1.0.0",
-  "stable": true,
-  "os": "windows",
-  "depricated": false,
-  "description": "lorem ipsum",
-  "price": 50
+{
+  "UMLGenVertions": [
+    {
+      "vertion": "1.0.0",
+      "stable": true,
+      "os": "windows",
+      "depricated": false,
+      "description": "Initial stable release for Windows. Includes core UML diagram generation, basic class parsing, and JSON rule support.",
+      "price": 50
+    },
+    {
+      "vertion": "1.0.0",
+      "stable": false,
+      "os": "linux",
+      "depricated": false,
+      "description": "Early Linux port of version 1.0.0. Contains core features but lacks full UI integration and performance optimizations.",
+      "price": 30
+    },
+    {
+      "vertion": "1.0.5",
+      "stable": true,
+      "os": "windows",
+      "depricated": false,
+      "description": "Bug fix update improving parsing accuracy and fixing UI crashes when handling large UML diagrams.",
+      "price": 50
+    },
+    {
+      "vertion": "0.0.3",
+      "stable": false,
+      "os": "windows",
+      "depricated": true,
+      "description": "Experimental prototype build. Limited functionality and unstable parsing system. No longer supported.",
+      "price": 0
+    },
+    {
+      "vertion": "1.0.0",
+      "stable": true,
+      "os": "mac",
+      "depricated": false,
+      "description": "First macOS release with full diagram rendering support and native UI compatibility.",
+      "price": 80
+    },
+    {
+      "vertion": "1.2.0",
+      "stable": true,
+      "os": "linux",
+      "depricated": false,
+      "description": "Major Linux update adding improved performance, multi-threaded parsing, and better file handling.",
+      "price": 30
+    },
+    {
+      "vertion": "1.5.0",
+      "stable": false,
+      "os": "mac",
+      "depricated": false,
+      "description": "Beta macOS build introducing plugin support and experimental real-time diagram updates.",
+      "price": 75
+    },
+    {
+      "vertion": "0.0.2",
+      "stable": false,
+      "os": "linux",
+      "depricated": true,
+      "description": "Early development build with minimal features and incomplete parsing logic. Deprecated.",
+      "price": 0
+    },
 
-},
-{
-  "vertion": "1.0.0",
-  "stable": false,
-  "os": "linux",
-  "depricated": false,
-  "description": "lorem ipsum",
-  "price": 30
-},
-{
-  "vertion": "1.0.5",
-  "stable": true,
-  "os": "windows",
-  "depricated": false,
-  "description": "lorem ipsum",
-  "price": 50
-},
-{
-  "vertion": "0.0.3",
-  "stable": false,
-  "os": "windows",
-  "depricated": true,
-  "description": "lorem ipsum",
-  "price": 0
-},
-{
-  "vertion": "1.0.0",
-  "stable": true,
-  "os": "mac",
-  "depricated": false,
-  "description": "lorem ipsum",
-  "price": 80
-},{
-  "vertion": "1.2.0",
-  "stable": true,
-  "os": "linux",
-  "depricated": false,
-  "description": "lorem ipsum",
-  "price": 30
-},{"vertion": "1.5.0",
-  "stable": false,
-  "os": "mac",
-  "depricated": false,
-  "description": "lorem ipsum",
-  "price": 75
-},{
-  "vertion": "0.0.2",
-  "stable": false,
-  "os": "linux",
-  "depricated": true,
-  "description": "lorem ipsum",
-  "price": 0}
-]}
+    {
+      "vertion": "2.0.0",
+      "stable": true,
+      "os": "windows",
+      "depricated": false,
+      "description": "Major release introducing modular rule engine, advanced syntax recognition, and improved UI/UX.",
+      "price": 70
+    },
+    {
+      "vertion": "2.0.0",
+      "stable": true,
+      "os": "linux",
+      "depricated": false,
+      "description": "Stable Linux release of version 2.0.0 with full feature parity and optimized memory usage.",
+      "price": 60
+    },
+    {
+      "vertion": "2.1.0",
+      "stable": false,
+      "os": "windows",
+      "depricated": false,
+      "description": "Preview build with live diagram editing, improved node linking, and partial AI-assisted structure detection.",
+      "price": 75
+    },
+    {
+      "vertion": "2.1.2",
+      "stable": true,
+      "os": "windows",
+      "depricated": false,
+      "description": "Stable patch improving performance of large-scale diagrams and fixing memory leaks.",
+      "price": 75
+    },
+    {
+      "vertion": "2.2.0",
+      "stable": false,
+      "os": "mac",
+      "depricated": false,
+      "description": "Experimental macOS version with redesigned UI and advanced export options (SVG, PDF, JSON).",
+      "price": 85
+    },
+    {
+      "vertion": "2.3.0",
+      "stable": true,
+      "os": "linux",
+      "depricated": false,
+      "description": "Stable Linux build adding plugin marketplace support and enhanced scripting capabilities.",
+      "price": 65
+    },
+    {
+      "vertion": "3.0.0",
+      "stable": false,
+      "os": "windows",
+      "depricated": false,
+      "description": "Next-gen beta featuring AI-assisted UML generation, automatic refactoring suggestions, and cloud sync.",
+      "price": 100
+    },
+    {
+      "vertion": "3.0.0",
+      "stable": false,
+      "os": "mac",
+      "depricated": false,
+      "description": "macOS beta for version 3.0.0 with AI-assisted diagram creation and collaborative editing tools.",
+      "price": 110
+    }
+  ]
+}
