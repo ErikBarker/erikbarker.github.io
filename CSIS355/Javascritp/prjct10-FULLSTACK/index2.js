@@ -2,7 +2,7 @@ const http = require('http');
 const os = require('os');
 const fs = require('fs');
 const path = require('path');
-const {mongoClient, MongoClient} = require("mongodb");
+const {MongoClient} = require("mongodb");
 
 //get uri
 require("dotenv").config();
@@ -94,7 +94,7 @@ const server = http.createServer((req,res)=>{
                 res.end(JSON.stringify({error: "failed to fetch books"}));
             });
         } else if(req.method === 'POST'){
-            
+
         }else if(req.method === 'PUT'){
             
         }else if(req.method === 'DELETE'){
