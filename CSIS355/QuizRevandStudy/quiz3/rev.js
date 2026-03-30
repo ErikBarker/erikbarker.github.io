@@ -15,7 +15,7 @@ try{
 
 function withdraw(balance, amount){
     if(amount > balance){
-            throw new Error("Insufficient funds");
+        throw new Error("Insufficient funds");
     }
 
     return balance - amount;
