@@ -37,6 +37,14 @@ const server = http.createServer((req, res) => {
                 res.end(content);
             }
         );
+    }if (req.url === '/index-temp') {
+        fs.readFile(path.join(__dirname, 'public', 'index-temp.html'),
+            (err, content) => {
+                if (err) throw err;
+                res.writeHead(200, { 'Content-Type': 'text/html' });
+                res.end(content);
+            }
+        );
     }
     else if (req.url === '/about') {
         fs.readFile(path.join(__dirname, 'public', 'about.html'),
@@ -78,38 +86,32 @@ const server = http.createServer((req, res) => {
             });
         }
         else if (req.url.startsWith('/api/') && req.method === 'PUT') {
-            const id = req.url.split('/')[2];
+            const id = Number(req.url.split('/')[2]);//quiz question
+            console.log(`updated book ${id}`);//id is not _id
+            
             let body = '';
             req.on('data', chunk => { body += chunk; });
             req.on('end', () => {
                 const updates = JSON.parse(body);
-                const { ObjectId } = require('mongodb');
+                console.log(updates)
                 booksCollection.updateOne(
-                    { _id: new ObjectId(id) },
-                    { $set: updates }
-                )
-                .then(result => {
-                    res.writeHead(200, { 'Content-Type': 'application/json' });
-                    res.end(JSON.stringify(result));
+                    {id:id},
+                    {$set:updates}
+                ).then(result=>{
+                        res.writeHead(200, {'content-type': 'application/json'})
+                        res.end(JSON.stringify(result))
+                    }
+                ).catch(err=>{
+                        res.write(500, {'content-type': 'application/json'})
+                        res.end("Server Side Error Failed to update book")
+                        console.log(err);
                 })
-                .catch(err => {
-                    res.writeHead(500, { 'Content-Type': 'application/json' });
-                    res.end(JSON.stringify({ error: "Failed to update book" }));
-                });
             });
         }
         else if (req.url.startsWith('/api/') && req.method === 'DELETE') {
             const id = req.url.split('/')[2];
-            const { ObjectId } = require('mongodb');
-            booksCollection.deleteOne({ _id: new ObjectId(id) })
-                .then(result => {
-                    res.writeHead(200, { 'Content-Type': 'application/json' });
-                    res.end(JSON.stringify(result));
-                })
-                .catch(err => {
-                    res.writeHead(500, { 'Content-Type': 'application/json' });
-                    res.end(JSON.stringify({ error: "Failed to delete book" }));
-                });
+            console.log(`deleted book ${id}`);
+            
         }
     else {
         res.writeHead(404, { 'Content-Type': 'text/html' });

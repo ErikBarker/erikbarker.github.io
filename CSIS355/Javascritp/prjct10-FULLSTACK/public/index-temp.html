@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book List</title>
+</head>
+<body>
+    <h1>My Book Collection</h1>
+
+    <h2>Add a Book</h2>
+    <input type="text" id="title" placeholder="Title">
+    <input type="text" id="author" placeholder="Author">
+    <input type="number" id="year" placeholder="Year">
+    <button id="addBtn">Add Book</button>
+    <p id="message"></p>
+
+    <h2> Update a Book </h2>
+    <input type="number" id="updateid" placeholder="Id">
+    <input type="text" id="updatetitle" placeholder="Title">
+    <input type="text" id="updateauthor" placeholder="Author">
+    <input type="number" id="updateyear" placeholder="Year">
+    <select id="updatePublished">
+        <option value="">no change</option>
+        <option value="true">Published</option>
+        <option value="false">Not Published<option>
+    </select>
+    <button id="updateBtn">Update Book</button>
+    <p id="updatemessage"></p>
+
+
+    <h2>All Books</h2>
+    <button id="fetchBtn">Fetch Books</button>
+    <div id="books"></div>
+
+    <script>
+
+        // GET - Fetch all books
+        document.getElementById('fetchBtn').addEventListener('click', () => {
+            fetch('/api')
+                .then(res => res.json())
+                .then(books => {
+                    const container = document.getElementById('books');
+                    if (books.length === 0) {
+                        container.innerHTML = '<p>No books found.</p>';
+                        return;
+                    }
+                    let html = '<ul>';
+                    books.forEach(book => {
+                        html += `<li>
+                            <strong>${book.title}</strong> by ${book.author}
+                            ${book.year ? ' (' + book.year + ')' : ''}
+                        </li>`;
+                    });
+                    html += '</ul>';
+                    container.innerHTML = html;
+                })
+                .catch(err => {
+                    document.getElementById('books').innerHTML = '<p>Error fetching books.</p>';
+                });
+        });
+
+        //Update Book
+        document.getElementById('updateBtn').addEventListener('click', () => {
+            const id = document.getElementById("updateid").value;
+
+            if (!id) {
+                document.getElementById("updatemessage").textContent = "must add id";
+            }
+
+            const updates ={
+
+            }
+
+            const title = document.getElementById("updatetitle").value;
+            const author = document.getElementById("updateauthor").value;
+            const year = document.getElementById("updateyear").value;
+            const published = document.getElementById("updatePublished").value;
+
+            if(title) updates.title = title;
+            if(year) updates.year = year;
+            if(author) updates.author = author;
+            
+
+            if(published !== '') updates.published = (published === "true");
+
+            if(Object.keys(updates).length === 0){
+                 document.getElementById("updatemessage").textContent = "must insert more then just id";
+            }
+
+            fetch(`/api/${id}`,{
+                method: 'PUT',
+                headers: {'content-type':'application/json'},
+                body: JSON.stringify(updates)
+            })
+            .then(res=>res.json())
+            .then(data=>{
+                document.getElementById("updatemessage").textContent="Success == Book Updated";
+
+                document.getElementById("updateId").value = '';
+                document.getElementById("updateTitle").value = '';
+                document.getElementById("updateYear").value = '';
+                document.getElementById("updatePublished").value = '';
+            })
+        });
+
+        //Add Book
+        document.getElementById('addBtn').addEventListener('click', () => {
+           
+
+        });
+    </script>
+</body>
+</html>
