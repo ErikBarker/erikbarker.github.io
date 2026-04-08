@@ -1,131 +1,125 @@
-const http = require('http');
-const os = require('os');
-const fs = require('fs');
-const path = require('path');
-const {MongoClient} = require("mongodb");
+const http = require("http");
+const path = require("path");
+const fs = require("fs");
+const { MongoClient } = require("mongodb");
+require('dotenv').config();
 
-//get uri
-require("dotenv").config();
-const URI = process.env.MONGO_URI;
+// in env file
+//  MONGO_URI="mongodb+srv://bibek:upadhayay@cluster0.jazwelx.mongodb.net/?retryWrites=true&w=majority&authMechanism=DEFAULT"
 
-//mongodb client
+const dns = require('dns')
+dns.setServers(['8.8.8.8', '1.1.1.1'])
 
-const client = new MongoClient(URI);
-let bookCollection;
-async function connectDB () {
-   try {
-     await client.connect();
-     bookCollection = client.db("bookdb").collection("bookcollection");
-     
-   } catch (error) {
-    console.error(
-        "mongodb connection failed",error
-    )
+const uri = process.env.MONGO_URI;
+const client = new MongoClient(uri);
 
-    //exit program
-    process.exit(1);
-   }
+// Connect once when the server starts, reuse the connection
+let booksCollection;
+
+async function connectDB() {
+    try {
+        await client.connect();
+        booksCollection = client.db("bookdb").collection("bookcollection");
+        console.log("Connected to MongoDB");
+    } catch (e) {
+        console.error("MongoDB connection failed:", e);
+        process.exit(1);
+    }
 }
 
-
-
-const server = http.createServer((req,res)=>{
-    const public = path.join(__dirname, "public");
+const server = http.createServer((req, res) => {
 
     if (req.url === '/') {
-        console.log("index.html");
-        const redpath = path.join(public, "index.html");
-        fs.readFile(redpath,(err,content)=>{
-            if(err){
-                throw err
+        fs.readFile(path.join(__dirname, 'public', 'index.html'),
+            (err, content) => {
+                if (err) throw err;
+                res.writeHead(200, { 'Content-Type': 'text/html' });
+                res.end(content);
             }
-
-            res.writeHead(200, {'content-type':'text/html'});
-            res.end(content);
-        })
-
-    } else if(req.url === '/donwload.html'){
-        console.log("download");
-        const redpath = path.join(public, "donwload.html");
-        fs.readFile(redpath,(err,content)=>{
-            if(err){
-                throw err
+        );
+    }
+    else if (req.url === '/about') {
+        fs.readFile(path.join(__dirname, 'public', 'about.html'),
+            (err, content) => {
+                if (err) throw err;
+                res.writeHead(200, { 'Content-Type': 'text/html' });
+                res.end(content);
             }
+        );
+    }
+    
 
-            res.writeHead(200, {'content-type':'text/html'});
-            res.end(content);
-        })
-
-    } else if(req.url === '/style.css'){
-        console.log("style");
-        const redpath = path.join(public, "style.css");
-        fs.readFile(redpath,(err,content)=>{
-            if(err){
-                throw err
-            }
-
-            res.writeHead(200, {'content-type':'text/css'});
-            res.end(content);
-        })
-
-    }else if(req.url === '/umllogo.png'){
-        console.log("umllogo");
-        const redpath = path.join(public, "umllogo.png");
-        fs.readFile(redpath,(err,content)=>{
-            if(err){
-                throw err
-            }
-
-            res.writeHead(200, {'content-type':'image/png'});
-            res.end(content);
-        })
-
-    } else if (req.url === '/api') {
-        console.log("api");
-        if (req.method === 'GET') {
-            //get books
-            bookCollection.find({}).toArray().then(
-                results =>{
-                    res.writeHead(200, {'content-type':'application/json'});
+    else  if (req.url === '/api' && req.method === 'GET') {
+            // Your existing fetch-all code
+            booksCollection.find({}).toArray()
+                .then(results => {
+                    res.writeHead(200, { 'Content-Type': 'application/json' });
                     res.end(JSON.stringify(results));
-                }
-            ).catch((err)=>{
-                res.writeHead(500, {'content-type':'application/json'});
-                res.end(JSON.stringify({error: "failed to fetch books"}));
-            });
-        } else if(req.method === 'POST'){
-
-        }else if(req.method === 'PUT'){
-            
-        }else if(req.method === 'DELETE'){
-            
-        } else {
-            res.writeHead(404, {'content-type':'text/html'});
-            res.end("<h1> 404 nothing here <h1>")
+                })
+                .catch(err => {
+                    res.writeHead(500, { 'Content-Type': 'application/json' });
+                    res.end(JSON.stringify({ error: "Failed to fetch books" }));
+                });
         }
-    } else {
-        console.log("404")
-        const redpath = path.join(public, "404.html");
-        fs.readFile(redpath,(err,content)=>{
-            if(err){
-                throw err
-            }
-
-            res.writeHead(404, {'content-type':'text/html'});
-            res.end(content);
-        })
-
+        else if (req.url === '/api' && req.method === 'POST') {
+            let body = '';
+            req.on('data', chunk => { body += chunk; });
+            req.on('end', () => {
+                const book = JSON.parse(body);
+                booksCollection.insertOne(book)
+                    .then(result => {
+                        res.writeHead(201, { 'Content-Type': 'application/json' });
+                        res.end(JSON.stringify(result));
+                    })
+                    .catch(err => {
+                        res.writeHead(500, { 'Content-Type': 'application/json' });
+                        res.end(JSON.stringify({ error: "Failed to add book" }));
+                    });
+            });
+        }
+        else if (req.url.startsWith('/api/') && req.method === 'PUT') {
+            const id = req.url.split('/')[2];
+            let body = '';
+            req.on('data', chunk => { body += chunk; });
+            req.on('end', () => {
+                const updates = JSON.parse(body);
+                const { ObjectId } = require('mongodb');
+                booksCollection.updateOne(
+                    { _id: new ObjectId(id) },
+                    { $set: updates }
+                )
+                .then(result => {
+                    res.writeHead(200, { 'Content-Type': 'application/json' });
+                    res.end(JSON.stringify(result));
+                })
+                .catch(err => {
+                    res.writeHead(500, { 'Content-Type': 'application/json' });
+                    res.end(JSON.stringify({ error: "Failed to update book" }));
+                });
+            });
+        }
+        else if (req.url.startsWith('/api/') && req.method === 'DELETE') {
+            const id = req.url.split('/')[2];
+            const { ObjectId } = require('mongodb');
+            booksCollection.deleteOne({ _id: new ObjectId(id) })
+                .then(result => {
+                    res.writeHead(200, { 'Content-Type': 'application/json' });
+                    res.end(JSON.stringify(result));
+                })
+                .catch(err => {
+                    res.writeHead(500, { 'Content-Type': 'application/json' });
+                    res.end(JSON.stringify({ error: "Failed to delete book" }));
+                });
+        }
+    else {
+        res.writeHead(404, { 'Content-Type': 'text/html' });
+        res.end("<h1>404 nothing is here</h1>");
     }
 });
 
-const PORTNUMBER = 5555;
+const PORT = process.env.PORT || 5555;
 
-//wait for connection
-connectDB().then(
-    ()=>{
-        //start server
-        server.listen(PORTNUMBER, ()=>console.log("server running"))
-    }
-)
-
-
+// Connect to DB first, then start the server
+connectDB().then(() => {
+    server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+});
