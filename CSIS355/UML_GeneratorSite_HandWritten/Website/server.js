@@ -1,4 +1,5 @@
-//server URL
+//server URL https://erikbarker-github-io.onrender.com
+//api URL https://erikbarker-github-io.onrender.com/api
 const http = require('http');
 const path = require('path');
 const fs = require('fs');
