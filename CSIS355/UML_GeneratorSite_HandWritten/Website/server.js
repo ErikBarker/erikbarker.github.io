@@ -1,7 +1,8 @@
-//Node.js requires
+//server URL
 const http = require('http');
 const path = require('path');
 const fs = require('fs');
+const {MongoClient} = require('mongodb')
 
 let UMLGenVertions;
 const URI = 'mongodb://NoteAppUser:notePass@ac-mbz5f01-shard-00-00.hgjj1vy.mongodb.net:27017,ac-mbz5f01-shard-00-01.hgjj1vy.mongodb.net:27017,ac-mbz5f01-shard-00-02.hgjj1vy.mongodb.net:27017/?ssl=true&replicaSet=atlas-6o79sr-shard-0&authSource=admin&appName=ebrker355';
@@ -10,7 +11,7 @@ const client = new MongoClient(URI);
 const connectDB = async ()=>{
     try {
         await client.connect();
-        booksCollection = client.db("bookdb").collection("bookcollection");
+        UMLGenVertions = client.db("UMLGenVertions").collection("Vertions");
         console.log("Connected to MongoDB");
     } catch (error) {
         console.error("MongoDB connection failed:", error);
@@ -79,10 +80,12 @@ const server = http.createServer((req, res)=>{
     }else if (req.url === '/api' && req.method === 'GET') {//TODO finish updating to work with mongo db (maybe update frontend to use selection req instead of retreaving all data every time and filtering)
         var filePath = path.join(public, "db.json");
 
-        fs.readFile(filePath, 'utf-8', (err, content)=>{
-            if(err) throw err;
-            res.writeHead(200, {"content-type":"text/json"});
-            res.end(content);
+        UMLGenVertions.find({}).toArray().then((results)=>{
+            res.writeHead(200, {'content-type' : 'application/json'});
+            res.end(JSON.stringify(results));
+        }).catch(err => {
+            res.writeHead(500, {'content-type' : 'application/json'})
+            res.end(JSON.stringify({ error: "Failed to fetch UML Vertions" }));
         });
         
     }else{
@@ -92,5 +95,5 @@ const server = http.createServer((req, res)=>{
 });
 
 connectDB().then(()=>{
-    server.listen(5556);
+    server.listen(5556, ()=>{console.log("Server Started")});
 })
