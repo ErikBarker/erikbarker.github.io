@@ -1,0 +1,68 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>LogIn</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <input type="text" id="Username" placeholder="Enter Username">
+        <br>
+        <input type="Password" id="Password" placeholder="Enter Password">
+        <br>
+        <button id="loginbtn" onclick="login()">Log In</button>
+
+        <p id="error"></p>
+        
+        <script>
+            const usernameBox = document.getElementById("Username");
+            const passwordBox = document.getElementById("Password");
+            const loginBtn = document.getElementById("loginbtn");
+            const errorLabel = document.getElementById("error");
+
+            passwordBox.addEventListener('keydown', (e)=>{
+                if (e.key === 'Enter') {
+                    login();
+                }
+            });
+
+            function login() {
+                let username = usernameBox.value;
+                let password = passwordBox.value;
+
+                if (!username || !password) {
+                    errorLabel.textContent = "Enter both fields";
+                    return;
+                } 
+                
+                console.log(username, password);
+                
+                fetch('/login', {
+                    method:'POST',
+                    headers:{
+                        'content-type':'application/json'
+                    },
+                    body:JSON.stringify({username, password})
+                }).then((res)=>{
+                    res.json()
+                }).then((data)=>{
+                    if (data.error) {
+                        errorLabel.textContent = data.error;
+                    }
+
+                    window.location.href='/dashboard'
+                }).catch((err)=>{
+                    errorLabel.textContent = 'login failed' + err.error;
+                })
+
+                
+            }
+
+        </script>
+    </body>
+</html>
