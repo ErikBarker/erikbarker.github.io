@@ -6,8 +6,12 @@
 
 //TODO for final
 //change to my product
+//  -set new schema
+//  -change api locations
+//  -
 //add front end
 //modify dashboard page for my product
+//change url to deployed url
 
 const dns = require('dns')
 dns.setServers(['8.8.8.8', '1.1.1.1'])

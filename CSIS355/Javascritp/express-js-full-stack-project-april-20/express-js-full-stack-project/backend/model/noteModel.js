@@ -26,7 +26,7 @@ const noteSchema = mongoose.Schema(
 
   // ---- Schema Options ----------------------------------------------
   {
-    timestamps: true, // Automatically adds and manages `createdAt` and `updatedAt` fields on every document
+    timestamps: false, // Automatically adds and manages `createdAt` and `updatedAt` fields on every document
     //  — no need to set them manually
   }
 )
