@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Dashboard</title>
+</head>
+<body>
+    <nav>
+        <div class="btncontainer">
+            <p id="userName">name</p>
+            <div class="btn" id="logoutBtn">
+                <p>LogOut</p>
+            </div>
+        </div>
+    </nav>
+    <section id="adminPannelBase">
+        <div class="getPannel">
+            <div class="topBar">
+                <div class="btncontainer">
+                    <div class="btn" id="getBTN">
+                        <p>GET</p>
+                    </div>
+                </div>
+                <div class="scrollContainer">data</div>
+            </div>
+        </div>
+        <div class="CUDpannel">
+            <div class="topBar">
+                <p>id:</p>
+                <input type="text" name="" id="">
+            </div>
+            <div class="mainPannal">
+                <div>
+                    <p>Version:</p>
+                    <input type="text" name="" id="versionInput">
+                </div>
+                <div>
+                    <p>Stable:</p>
+                    <input type="checkbox" name="" id="stableInput">
+                </div>
+                <div>
+                    <p>Operating System</p>
+                    <select name="" id="osInput">
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+                </div>
+                <div>
+                    <p>desc:</p>
+                    <input type="text" name="" id="descInput">
+                </div>
+                <div>
+                    <p>price:</p>
+                    <input type="text" name="" id="priceInput">
+                </div>
+            </div>
+            <div class="btncontainer">
+                <div class="btn" id="createBTN">create</div>
+                <div class="btn" id="updateBTN">update</div>
+                <div class="btn" id="deleteBTN">delete</div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
