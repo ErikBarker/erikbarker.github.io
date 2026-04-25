@@ -8,11 +8,11 @@
   "main": "backend/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx nodemon backend/server.js"
+    "dev": "npx nodemon server.js"
   },
   "dependencies": {
     "dotenv": "^17.4.2",
+    "mongodb": "^7.2.0",
     "nodemon": "^3.1.14"
-  },
-  "devDependencies": {}
+  }
 }

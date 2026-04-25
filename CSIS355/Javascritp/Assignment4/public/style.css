@@ -1,0 +1,191 @@
+:root{
+    --primary_color: #ffffff;
+    --secondary_color: #A0E1E1;
+    --background_color1: #E9EBE7;
+    --background_color2: #0C2C68 ;
+
+    --menu_button_defult: #1F6463;
+    --menu_button_hover: #7787A5;
+
+    --button_defult: #1F6463;
+    --button_hover: #7787A5;
+
+    --primary_text_color: black;
+    --secondary_text_color: white;
+    --off_text_color: #E9EBE7;
+
+    --radius: 10px;
+    --seperationSpace: 15px;
+
+    scroll-behavior: smooth;
+}
+
+html, body{
+    padding: 0;
+    margin: 0;
+}
+
+.btncontainer{
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.btn{
+    padding: 5px;
+    background-color: var(--secondary_color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: var(--radius);
+}
+
+.btn:hover{
+    background-color: var(--button_hover);
+}
+
+.btn p{
+    padding: 0;
+    margin: 0;
+
+    color: var(--primary_text_color);
+    transition: color 0.25s;
+    
+}
+
+.btn:hover p{
+    color: var(--secondary_text_color);
+
+}
+
+nav{
+    padding: 15px;
+
+    background-color: var(--background_color2);
+}
+
+nav .btncontainer{
+    justify-content: right;
+}
+
+#userName{
+    color: var(--secondary_text_color);
+}
+
+#adminPannelBase, #loginPannelBase{
+    height: 75vh;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    gap: var(--seperationSpace);
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+
+    padding-top: var(--seperationSpace);
+}
+
+#loginPannelBase{
+    grid-template-columns: 1fr;
+}
+
+.getPannel{
+    height: 100%;
+    width: 80%;
+
+    border-radius: var(--radius);
+    background-color: var(--background_color1);
+    padding: var(--seperationSpace);
+    box-shadow: gray 3px 3px;
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--seperationSpace);
+}
+
+.getPannel .topBar{
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.getPannel .scrollContainer{
+    height: 90%;
+    max-height: 50vh;
+    overflow: scroll;
+
+    background-color: var(--primary_color);
+}
+
+.CUDpannel{
+    border-radius: var(--radius);
+    background-color: var(--background_color1);
+    padding: var(--seperationSpace);
+    box-shadow: gray 3px 3px;
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--seperationSpace);
+
+}
+
+.CUDpannel .topBar{
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.CUDpannel .topBar p{
+    padding: 0;
+    margin: 0;
+}
+
+.CUDpannel .mainPannel{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: var(--seperationSpace);
+
+}
+
+.CUDpannel .mainPannel div{
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: var(--seperationSpace);
+}
+
+.CUDpannel .mainPannel div p{
+    padding: 0;
+    margin: 0;
+}
+
+.loginPannel{
+    height: 100%;
+    width: 30%;
+
+    border-radius: var(--radius);
+    background-color: var(--background_color1);
+    padding: var(--seperationSpace);
+    box-shadow: gray 3px 3px;
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--seperationSpace);
+}
+
+.loginPannel .topBar{
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 15px;
+}
