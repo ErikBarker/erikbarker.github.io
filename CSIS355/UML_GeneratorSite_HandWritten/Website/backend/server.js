@@ -9,7 +9,7 @@ require('dotenv').config();
 const connectDB = require('./config/db.js');
 const PORT = process.env.PORT || 5556;
 
-const {errorHandler} = require('./Middleware/errorMiddleware.js')
+const {errorHandler} = require('./middleware/errorMiddleware.js')
 
 
 // let UMLGenVertions;
