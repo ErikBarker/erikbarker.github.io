@@ -124,6 +124,8 @@ app.use(errorHandler);
 
 //server logic for routes
 app.use(express.static(path.join(__dirname, '../public')));
+console.log("DIRNAME:", __dirname);
+console.log("PUBLIC PATH:", path.join(__dirname, '../public'));
 
 
 
