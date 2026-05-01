@@ -127,7 +127,9 @@ app.use(express.static(path.join(__dirname, '../public')));
 console.log("DIRNAME:", __dirname);
 console.log("PUBLIC PATH:", path.join(__dirname, '../public'));
 
-
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/index.html'));
+});
 
 app.use('/api/users', require('./routes/userRoutes'));
 app.use('/api/umlGenVertion', require('./routes/umlGenVertionRoutes'));
