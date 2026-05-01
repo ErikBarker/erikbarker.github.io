@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+    <title>UML Generater - Dashboard</title>
+</head>
+<body>
+    <nav>
+        <div class="btncontainer">
+            <p id="userName">name</p>
+            <div class="btn" id="logoutBtn">
+                <p>LogOut</p>
+            </div>
+        </div>
+    </nav>
+    <section id="adminPannelBase" class="bg1">
+        <div class="getPannel">
+            <div class="topBar">
+                <div class="btncontainer">
+                    <div class="btn" id="getBTN">
+                        <p>GET</p>
+                    </div>
+                </div>
+            </div>
+            <div class="scrollContainer" id="productList">data</div>
+        </div>
+        <div class="CUDpannel">
+            <div class="topBar">
+                <p>id:</p>
+                <input type="text" name="id" id="idInput">
+            </div>
+            <div class="mainPannel">
+                <div>
+                    <p>Version:</p>
+                    <input type="text" name="version" id="versionInput">
+                </div>
+                <div>
+                    <p>Stable:</p>
+                    <input type="checkbox" name="stable" id="stableInput">
+                </div>
+                <div>
+                    <p>Operating System</p>
+                    <select name="OS" id="osInput">
+                        <option value="windows">Windows</option>
+                        <option value="linux">Linux</option>
+                        <option value="mac">MacOS</option>
+                    </select>
+                </div>
+                <div>
+                    <p>desc:</p>
+                    <input type="text" name="description" id="descInput">
+                </div>
+                <div>
+                    <p>price:</p>
+                    <input type="text" name="price" id="priceInput">
+                </div>
+                <div>
+                    <p>Depricated:</p>
+                    <input type="checkbox" name="Depricated" id="depricatedInput">
+                </div>
+            </div>
+            <div class="btncontainer">
+                <div class="btn" id="createBTN">create</div>
+                <div class="btn" id="updateBTN">update</div>
+                <div class="btn" id="deleteBTN">delete</div>
+            </div>
+            <div>
+                <p id="ERRORSTRING">Error String</p>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="dashboard.js"></script>
+</html>

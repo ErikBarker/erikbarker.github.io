@@ -4,17 +4,19 @@ const downloadMenucontainer = document.getElementById("downloadMenucontainer");
 
 async function getProducts() {
     //Get the data
-    const response = await fetch("https://erikbarker.github.io/CSIS355/UML_GeneratorSite_HandWritten/Website/Public/db.json");
+    const response = await fetch("/api/umlGenVertion");
 
     const data = await response.json();
 
     return data;
 }
 
+//TODO update front end to work with backend
 async function processProducts() {
     const data = await getProducts();
+    console.log(data)
 
-    const productList = data.UMLGenVertions;
+    const productList = data;
 
     console.log(data)
     console.log(productList)
@@ -139,7 +141,7 @@ function genDownloadsection(data){
 
 async function updateMenu(){
     const data = await getProducts();
-    const productList = data.UMLGenVertions;
+    const productList = data;
 
     
 

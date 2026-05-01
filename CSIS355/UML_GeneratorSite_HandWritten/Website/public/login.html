@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+    <title>UML Generater - Login</title>
+</head>
+<body>
+    <nav>
+        <div class="navmenucontainer">
+            <div class="buttoncontainer desktop">
+                <a href="index.html#top" class="menubutton">
+                    <div>
+                        <p>Home</p>
+                    </div>
+                </a>
+            </div>
+            <div class="buttoncontainer desktop">
+                <a href="index.html#download" class="menubutton">
+                    <div>
+                        <p>Download</p>
+                    </div>
+                </a>
+            </div>
+            <div class="titlecontainer">
+                <img src="https://erikbarker.github.io/CSIS355/UML_GeneratorSite_HandWritten/Website/Public/umllogo.png" alt="UML Generater">
+            </div>
+            <div class="buttoncontainer desktop">
+                <a href="index.html#development" class="menubutton">
+                    <div>
+                        <p>Development</p>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- <div class="buttoncontainer desktop">
+                <a href="#reportbugs" class="menubutton">
+                    <div>
+                        <p>Report Bugs</p>
+                    </div>
+                </a>
+            </div> -->
+
+            <div class="buttoncontainer">
+                    <a href="./login.html" class="menubutton">
+                        <div>
+                            <p>Log In</p>
+                        </div>
+                    </a>
+            </div>
+
+            <div class="buttoncontainer mobile" id="hamburger">
+                <a class="menubutton">
+                    <div>
+                        <p>Menu</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div id="hamburgerMenu" class="bg1 hidden">
+            <div class="hammenucontainer">
+                <div class="buttoncontainer">
+                    <a href="index.html#top" class="menubutton">
+                        <div>
+                            <p>Home</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="buttoncontainer">
+                    <a href="index.html#download" class="menubutton">
+                        <div>
+                            <p>Download</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="buttoncontainer">
+                    <a href="index.html#development" class="menubutton">
+                        <div>
+                            <p>Development</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- <div class="buttoncontainer">
+                    <a href="#reportbugs" class="menubutton">
+                        <div>
+                            <p>Report Bugs</p>
+                        </div>
+                    </a>
+                </div> -->
+
+                <div class="buttoncontainer">
+                    <a href="login.html" class="menubutton">
+                        <div>
+                            <p>Log In</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section id="loginPannelBase" class="bg1">
+        <div class="loginPannel">
+            <div class="topBar">
+                <h1>Login</h1>
+            </div>
+            <input type="text" id="user" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button id="loginBtn">Log In</button>
+            <p id="error"></p>
+        </div>
+    </section>
+    
+
+    <script>
+        document.getElementById('loginBtn').addEventListener('click', doLogin);
+        document.getElementById('password').addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') doLogin();
+        });
+
+        function doLogin() {
+            const name = document.getElementById('user').value;
+            const password = document.getElementById('password').value;
+
+            if (!name || !password) {
+                document.getElementById('error').textContent = 'Enter both fields.';
+                return;
+            }
+
+            fetch('/api/users/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name, password })
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (data.error) {
+                    document.getElementById('error').textContent = data.error;
+                    return;
+                }
+
+                localStorage.setItem("token", data.token);
+                window.location.href = '/dashboard.html';
+            })
+            .catch((err) => {
+                document.getElementById('error').textContent = 'Login failed: ' + err.message;
+            });
+        }
+    </script>
+</body>
+</html>
