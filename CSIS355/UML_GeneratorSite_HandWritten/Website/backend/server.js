@@ -123,7 +123,11 @@ app.use(errorHandler);
 
 
 //server logic for routes
-app.use(express.static('/public'));
+app.use(express.static('./public'));
+
+app.get('/', (req, res) => {
+    res.sendFile( './public/index.html');
+}); 
 
 app.use('/api/users', require('./routes/userRoutes'));
 app.use('/api/umlGenVertion', require('./routes/umlGenVertionRoutes'));
