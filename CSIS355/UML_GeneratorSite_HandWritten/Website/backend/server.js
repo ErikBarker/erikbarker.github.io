@@ -107,7 +107,7 @@ const {errorHandler} = require('./middleware/errorMiddleware.js')
 // })
 
 //EXPRESS REWRITE
-
+//due to the way that render works it breaks local running of the code due to miss matched file structures
 connectDB();
 
 const app = express();
@@ -125,9 +125,7 @@ app.use(errorHandler);
 //server logic for routes
 app.use(express.static('./public'));
 
-app.get('/', (req, res) => {
-    res.sendFile( './public/index.html');
-}); 
+
 
 app.use('/api/users', require('./routes/userRoutes'));
 app.use('/api/umlGenVertion', require('./routes/umlGenVertionRoutes'));
